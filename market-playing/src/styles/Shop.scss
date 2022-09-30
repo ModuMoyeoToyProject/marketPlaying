@@ -1,0 +1,95 @@
+.shop_format {
+  display: flex;
+  padding: 50px;
+
+  .thing_viewer {
+    display: flex;
+    padding: 30px;
+
+    .goods {
+      display: flex;
+      background-color: antiquewhite;
+      border: 1px solid #444444;
+
+      .goods_info {
+        width: 250px;
+        height: 250px;
+        padding: 20px;
+        border: 1px solid #444444;
+        margin: 2px;
+        background-color: white;
+
+        .goods_name {
+          margin-bottom: 50px;
+        }
+      }
+
+      .goods_img {
+        width: 250px;
+        height: 250px;
+        padding: 20px;
+        border: 1px solid #444444;
+        margin: 2px;
+        background-color: white;
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  .purchaser {
+    .purchase_list {
+      display: flex;
+
+      .arrow {
+        width: 50px;
+        height: 50px;
+        margin: 100px auto;
+        font-size: 30px;
+      }
+
+      .purchase_table {
+        border-collapse: collapse;
+        margin: 0 10px;
+        padding-bottom: 10px;
+
+        tr,
+        td {
+          background-color: antiquewhite;
+          border: 2px solid #444444;
+        }
+
+        td {
+          width: 200px;
+          padding: 10px;
+          padding-bottom: 0;
+          text-align: center;
+        }
+
+        img {
+          width: 200px;
+          height: 200px;
+          background-color: white;
+          border: 1px solid #444444;
+        }
+
+        .money_tr {
+          td {
+            padding-bottom: 15px;
+          }
+          background-color: antiquewhite;
+          height: auto;
+        }
+
+        .money {
+          background-color: white;
+          padding: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
