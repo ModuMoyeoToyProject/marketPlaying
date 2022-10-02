@@ -58,23 +58,23 @@ const LineChart = () => {
               { x: "2000", y: 46.3 },
               { x: "2010", y: 49.2 },
               { x: "2019", y: 50.0 },
-              { x: "2020", y: 50.2 }
-            ]
-          }
-        ]
+              { x: "2020", y: 50.2 },
+            ],
+          },
+        ],
       },
       options: {
         animation: {
-          duration: 2000
+          duration: 2000,
         },
         responsive: true,
         maintainAspectRatio: false,
         tooltips: {
           mode: "x",
-          intersect: false
+          intersect: false,
         },
         legend: {
-          display: false
+          display: false,
         },
         scales: {
           xAxes: [
@@ -82,36 +82,36 @@ const LineChart = () => {
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: "연도"
+                labelString: "연도",
               },
               type: "time",
               time: {
                 unit: "year",
-                unitStepSize: 10
+                unitStepSize: 10,
               },
               ticks: {
-                fontSize: 13
-              }
-            }
+                fontSize: 13,
+              },
+            },
           ],
           yAxes: [
             {
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: "수도권 인구비중"
+                labelString: "수도권 인구비중",
               },
               ticks: {
                 fontSize: 13,
                 beginAtZero: true,
                 callback: function (value, index, values) {
                   return value + "%";
-                }
-              }
-            }
-          ]
-        }
-      }
+                },
+              },
+            },
+          ],
+        },
+      },
     });
   }, [chartContainer]);
 
