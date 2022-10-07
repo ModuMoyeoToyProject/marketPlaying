@@ -77,5 +77,32 @@
     font-size: 12px; 
     margin-top: -6px;
 } 
+ 
 
-  
+.linkItem  {
+    color: inherit;
+    text-decoration: inherit;
+} 
+
+.linkItem.none  {
+    color: gray; 
+} 
+
+
+.linkBtn  {
+    min-height: 30px;
+    min-width: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-right: "5px";
+} 
+
+.linkBtn.none  {
+    background: lightgrey;
+} 
+
+
+ 
