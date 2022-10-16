@@ -14,6 +14,7 @@ const ShopFormat = (props) => {
         place: "집 앞",
         usage: "양털 깎기",
         power: "20%",
+        price: 300
       },
       {
         number: 2,
@@ -23,6 +24,7 @@ const ShopFormat = (props) => {
         place: "집 앞",
         usage: "양털 깎기",
         power: "30%",
+        price: 3000
       },
       {
         number: 3,
@@ -32,6 +34,7 @@ const ShopFormat = (props) => {
         place: "집 앞",
         usage: "양털 깎기",
         power: "50%",
+        price: 30000
       },
     ],
     [
@@ -43,6 +46,7 @@ const ShopFormat = (props) => {
         place: "집 앞",
         usage: "집 짓기, 가구 만들기",
         power: "20%",
+        price: 300
       },
       {
         number: 5,
@@ -52,6 +56,7 @@ const ShopFormat = (props) => {
         place: "집 앞",
         usage: "집 짓기, 가구 만들기",
         power: "30%",
+        price: 3000
       },
       {
         number: 6,
@@ -61,6 +66,7 @@ const ShopFormat = (props) => {
         place: "집 앞",
         usage: "집 짓기, 가구 만들기",
         power: "50%",
+        price: 30000
       },
     ],
   ];
@@ -92,7 +98,7 @@ const ShopFormat = (props) => {
 
   return (
     <div className="shop_format">
-      <div>
+      <div className={props.imgStyle}>
         <h1 className="shop_name">철물점</h1>
         <img src={require("../../img/hardware_owner.jpeg")} />
       </div>
@@ -111,9 +117,9 @@ const ShopFormat = (props) => {
             </div>
           </div>
           <div className="btns_div">
-            <button className="function_btn">구입하기</button>
+            <button className="function_btn" onClick={props.fn_updateBag(goods, goods.price, 1)} >구입하기</button>
             <br />
-            <button className="function_btn">판매하기</button>
+            <button className="function_btn" onClick={props.fn_updateBag(goods, goods.price, -1)}>판매하기</button>
             <br />
             <button className="function_btn">나가기</button>
           </div>
