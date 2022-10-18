@@ -37,8 +37,8 @@ function PageList() {
       <h3 style={{marginTop: 50}}>미션2 (~ 10/19)</h3>
       <ul> 
         <Link className="linkItem none" to="/"><li>1. [입문] react-router-dom 배우고 예시 적용하기</li></Link>
-        <Link className="linkItem none" to="/"><li>2. [하돌] "url 말고 다른 방법으로" 장소 이동하기. 상점 앞 클릭하면 상점으로, 집앞 클릭하면 집으로 이동하기</li></Link>
-        <Link className="linkItem none" to="/"><li>3. [리코더] 4번이랑 연동해서 구입하기 누르면 그만큼 돈 내려가고 인벤토리에 상품 추가, 판매하기 누르면 그만큼 돈 올라가고 인벤토리에 상품 삭제</li></Link>
+        <Link className="linkItem none" to="/main"><li>2. [하돌] "url 말고 다른 방법으로" 장소 이동하기. 상점 앞 클릭하면 상점으로, 집앞 클릭하면 집으로 이동하기</li></Link>
+        <Link className="linkItem none" to="/main"><li>3. [리코더] 4번이랑 연동해서 구입하기 누르면 그만큼 돈 내려가고 인벤토리에 상품 추가, 판매하기 누르면 그만큼 돈 올라가고 인벤토리에 상품 삭제</li></Link>
         <Link className="linkItem none" to="/"><li>4. [어차피어피치] 인벤토리 기능 구현(전체 물건들 중에서 갖고 있는 건 색 있게, 없는 건 색 없게. 갯수 표시)</li></Link>
         <Link className="linkItem none" to="/"><li>5. [레제] 나무패기, 양털깎기, 뭐 만들기 미니게임 만들기</li></Link>
         <Link className="linkItem none" to="/"><li>6. [BD] 상점 디자인</li></Link>

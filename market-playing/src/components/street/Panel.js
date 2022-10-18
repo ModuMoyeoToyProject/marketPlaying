@@ -240,7 +240,8 @@ const Panel = (props) => {
           key={index}
           id={item.id}
           data={item}
-          onMouseUp={handleBuildingClicked}
+          // onMouseUp={handleBuildingClicked}
+          onClick={props.fn_move(item.id)}
           bgColor={item.backgroundForTest}
         >
           {item.src ? (

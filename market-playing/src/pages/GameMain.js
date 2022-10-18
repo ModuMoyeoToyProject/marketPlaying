@@ -204,24 +204,30 @@ const GameMain = () => {
         fn_move={changeMenu}
         fn_showBag={showBag}
       ></UserInfo> 
-      {/* 거리 */}
-      <div className={dayNightMode + " area " + (menuId=="street"?"on":"off")}>
-        <Panel
-          preMenu={preMenuId}
-          fn_move={changeMenu} 
-        /> 
-      </div>
+      {/* 거리 */} 
+      {(menuId=="street")?
+        <div className={dayNightMode + " area on"}>
+          <Panel
+            preMenu={preMenuId}
+            fn_move={changeMenu} 
+          /> 
+        </div>
+      :<></>} 
       {/* 상점 */}
-      <div className={"area " + (menuId=="shop"?"on":"off")}>
-        <ShopFormat 
-          imgStyle={"off"}
-          fn_updateBag={updateBag}
-        /> 
-      </div>
+      {(menuId=="shop")?
+        <div className={"area on"}>
+          <ShopFormat 
+            imgStyle={"off"}
+            fn_updateBag={updateBag}
+          /> 
+        </div>
+      :<></>}  
       {/* 미니게임 */}
-      <div className={"area " + (menuId=="lake"?"on":"off")}>
-        <Lake />
-      </div>
+      {(menuId=="lake")? 
+        <div className={"area on"}>
+          <Lake />
+        </div>
+      :<></>}   
     </Container>
   );
 };
