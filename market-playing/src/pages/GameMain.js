@@ -2,6 +2,8 @@
  * @FileName    : GameMain.jsx
  * @Description : 개발항목 List
  * @History     : 2022.10.07.  리코더     페이지 생성/하돌님 Street에 유저정보추가
+ *              : 2022.10.16.  리코더     하돌님 2차미션 추가 
+ *              : 2022.10.16.  리코더     상점 구매 / 판매 
  * 
  */
 import React, { useState, useRef, useEffect } from 'react';
@@ -11,8 +13,9 @@ import UserInfo from '../components/gameMain/UserInfo';
 import "../styles/Game.scss";
 
 import styled from "styled-components";
-import kirby from "../img/kirby.gif";
-import store1 from "../img/store_1.png";
+import Panel from "../components/street/Panel";
+import Lake from '../components/game/Lake';
+import ShopFormat from "../components/shop/ShopFormat";
 
 const Container = styled.div`
   width: 100%;
@@ -28,54 +31,9 @@ const Title = styled.div`
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
+  z-index: 999;
 `;
 
-const Panel = styled.div`
-  position: relative;
-  width: 1024px;
-  height: 600px;
-  z-index: 1;
-`;
-
-const preventArea = styled.div`
-  position: absolute;
-  z-index: 2;
-`;
-
-const Grass = styled(preventArea)`
-  width: 1024px;
-  height: 180px;
-  left: 0;
-  top: 0px;
-  background-color: yellowGreen; 
-  font-size: 30px;
-  font-weight: 900;
-  color: yellow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Store1 = styled(preventArea)`
-  width: 240px;
-  height: 200px;
-  top: 300px;
-  left: 750px;
-  img {
-    width: inherit;
-    -webkit-user-drag: none;
-  }
-`;
-
-const Kirby = styled.img`
-  position: relative;
-  width: ${(props) => `${props.obj.sizeX}px`};
-  height: ${(props) => `${props.obj.sizeY}px`};
-  left: ${(props) => `${props.obj.x - props.obj.sizeX / 2}px`};
-  top: ${(props) => `${props.obj.y - props.obj.sizeY / 2}px`};
-  z-index: 99;
-  -webkit-user-drag: none;
-`;
 
 const padNumber = (num, length) => {
   // console.log("padNumber ", num, length);
@@ -107,15 +65,58 @@ const GameMain = () => {
   const [sec, setSec] = useState(null); 
 
 
-  // --------------------------------------------- 유저 잔액 증감
-  const [userWallet, setUserWallet] = useState(0); 
-    
+  // --------------------------------------------- 메뉴제어
+  const [menuId, setMenuId] = useState("street"); 
+  const [preMenuId, setPreMenuId] = useState("");
 
-  const changeAmount = (m) => {
-      return () => {
-          console.log("changeAmount ", userWallet, m);  
-          setUserWallet(userWallet+m); 
-      }; 
+  const changeMenu = (tobe) => {
+    return () => {
+      console.log(tobe);
+      if(menuId != tobe){ 
+        setPreMenuId(menuId);
+        setMenuId(tobe); 
+      } 
+    }; 
+  }; 
+
+
+
+  // --------------------------------------------- 유저 잔액 증감
+  const [userWallet, setUserWallet] = useState(0);  
+  const [userBag, setUserBag] = useState([]);  
+
+  const changeAmount = (m) => { 
+    console.log("changeAmount ", userWallet, m);  
+    setUserWallet(userWallet+m);  
+  };
+
+  const updateBag = (item, price, count) => {  
+    return () => {  
+      console.log( item, price, count); 
+      let totalPrice = price * count * -1 ;
+      if(price == 0 && count == 0){
+        setUserWallet(0);
+        return;
+      }
+      console.log("totalPrice : ",totalPrice); 
+      if(totalPrice){
+        if(userWallet + totalPrice < 1){
+          alert("잔액부족");
+          return;
+        }
+        changeAmount(totalPrice); 
+      } 
+    }; 
+  };
+
+  const showBag = () => {  
+    return () => {  
+    }; 
+  };
+
+  const hideBag = () => {  
+    return () => {  
+    }; 
   };
 
   useEffect(() => {
@@ -185,29 +186,7 @@ const GameMain = () => {
 
 
 
-
-  // --------------------------------------------- 배경 / 캐릭터 제어
-  const [obj, setObj] = useState({
-    sizeX: 50,
-    sizeY: 50,
-    x: 512,
-    y: 300,
-  });
-
-  const handleMouseMove = (e) => {
-    let { x, y } = e.target.getBoundingClientRect();
-    let positionX = e.pageX - x < obj.sizeX / 2 ? obj.sizeX / 2 : e.pageX - x;
-    let positionY = e.pageY - y < obj.sizeY / 2 ? obj.sizeY / 2 : e.pageY - y;
-    setObj((prev) => ({
-      ...prev,
-      x: positionX,
-      y: positionY,
-    }));
-  };
-
-  const handlePrevent = (e) => {
-    e.stopPropagation();
-  };
+ 
 
   return (
     <Container>
@@ -217,17 +196,38 @@ const GameMain = () => {
         days={userDays} 
         hour={userHour} 
         min={userMin} 
-        isNight={isNight} 
+        isNight={isNight}  
+        fn_addTime={addTime}
         amount={userWallet} 
-        fn_addTime={addTime} 
-      ></UserInfo>
-      <Panel className={dayNightMode} onMouseUp={handleMouseMove}>
-        <Kirby src={kirby} obj={obj} onMouseUp={handlePrevent}></Kirby>
-        <Grass onMouseUp={handlePrevent}>배경</Grass>
-        <Store1 onMouseUp={handlePrevent}>
-          <img src={store1} alt="store1"></img>
-        </Store1>
-      </Panel>
+        fn_updateBag={updateBag}
+        preMenu={preMenuId} 
+        fn_move={changeMenu}
+        fn_showBag={showBag}
+      ></UserInfo> 
+      {/* 거리 */} 
+      {(menuId=="street")?
+        <div className={dayNightMode + " area on"}>
+          <Panel
+            preMenu={preMenuId}
+            fn_move={changeMenu} 
+          /> 
+        </div>
+      :<></>} 
+      {/* 상점 */}
+      {(menuId=="shop")?
+        <div className={"area on"}>
+          <ShopFormat 
+            imgStyle={"off"}
+            fn_updateBag={updateBag}
+          /> 
+        </div>
+      :<></>}  
+      {/* 미니게임 */}
+      {(menuId=="lake")? 
+        <div className={"area on"}>
+          <Lake />
+        </div>
+      :<></>}   
     </Container>
   );
 };

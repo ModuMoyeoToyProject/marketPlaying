@@ -8,8 +8,7 @@ import { useNavigate } from "react-router-dom";
 const PanelContainer = styled.div`
   position: relative;
   width: 1024px;
-  height: 600px;
-  background-color: skyblue;
+  height: 600px; 
   z-index: 1;
 `;
 
@@ -63,7 +62,7 @@ const BuildingArea = styled.div`
   }
 `;
 
-const Panel = () => {
+const Panel = (props) => {
   const mapList = {
     "main-square": {
       name: "중앙 광장",
@@ -201,7 +200,13 @@ const Panel = () => {
   const handleBuildingClicked = (e) => {
     e.stopPropagation();
     moveCharacter(512, 300);
-    navigate(`/${e.target.id}`);
+    // navigate(`/${e.target.id}`);
+    props.fn_move(e.target.id);
+    /* 
+    하돌님 help .. 함수가 안먹는 이유가 뭘까요?
+
+    */
+    
   };
 
   const handlePrevent = (e) => {
@@ -235,7 +240,8 @@ const Panel = () => {
           key={index}
           id={item.id}
           data={item}
-          onMouseUp={handleBuildingClicked}
+          // onMouseUp={handleBuildingClicked}
+          onClick={props.fn_move(item.id)}
           bgColor={item.backgroundForTest}
         >
           {item.src ? (

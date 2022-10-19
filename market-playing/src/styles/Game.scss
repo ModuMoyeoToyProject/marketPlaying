@@ -40,12 +40,20 @@
         opacity: 1; // 불투명
     } 
 }
+
+.area {
+    position: relative;
+    width: 1024px;
+    height: 600px; 
+    border: 3px solid rgb(196, 188, 179);   // 영역 표시 위해 임시로
+}
  
 
 .dayMode {
     background: #9dd5e9;
     // color: black; 
     animation: overLapDay 2s ease-in-out;   
+    z-index: 1;
 }
 
 .nightMode {
@@ -53,6 +61,7 @@
     background: #27283c;
     // color: white; 
     animation: overLapNight 2s ease-in-out;  
+    z-index: 1;
 } 
 
 .userArea { 
@@ -104,5 +113,10 @@
     background: lightgrey;
 } 
 
+.on {
+    display: "";
+}
 
- 
+.off {
+    display: none;
+} 
