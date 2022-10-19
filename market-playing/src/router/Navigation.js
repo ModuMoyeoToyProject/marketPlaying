@@ -4,20 +4,24 @@ import Home from "../pages/Home";
 import Shop from "../pages/Shop";
 import Inventory from "../pages/Inventory";
 import Chart from "../pages/Chart";
-import UserInfoTest from "../pages/UserInfoTest";
 import Street from "../pages/Street";
+import GameMain from "../pages/GameMain";
+import PageList from "../pages/PageList";
+import UserInfoTest from "../pages/UserInfoTest";
 import "../styles/App.scss";
 
 function Navigation() {
   return (
     <Router className="main">
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/userInfoTest" element={<UserInfoTest />} />
+        <Route exact path="/" element={<PageList />} />
+        <Route path="/lake" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/chart" element={<Chart />} />
         <Route path="/street" element={<Street />} />
+        <Route path="/main" element={<GameMain />} />
+        <Route path="/userInfoTest" element={<UserInfoTest />} />
       </Routes>
     </Router>
   );
