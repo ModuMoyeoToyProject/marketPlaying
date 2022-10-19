@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Shop from "../pages/Shop";
+import Inventory from "../pages/Inventory";
 import Chart from "../pages/Chart";
 import Street from "../pages/Street";
 import GameMain from "../pages/GameMain";
@@ -16,6 +17,7 @@ function Navigation() {
         <Route exact path="/" element={<PageList />} />
         <Route path="/lake" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/inventory" element={<Inventory />} />
         <Route path="/chart" element={<Chart />} />
         <Route path="/street" element={<Street />} />
         <Route path="/main" element={<GameMain />} />
