@@ -4,119 +4,114 @@
  * @History     : 2022.10.07.  리코더   생성
  * 
  */
- 
-
 
 @keyframes overLapDay {
-    0% {
-        background: #27283c;
-        color: white;
-        // background-image: linear-gradient(to bottom, #27283cc2, #9dd5e900);   
-        // transform: translateY(0px);  
-        opacity: 1; // 투명 
-    }
-    100% {
-        background: #9dd5e9;
-        color: black;
-        // background-image: linear-gradient(to bottom, #ffc34080, #9dd5e900);  
-        // transform: translateY(-200px);   
-        opacity: 1; // 불투명
-    } 
+  0% {
+    background: #27283c;
+    color: white;
+    // background-image: linear-gradient(to bottom, #27283cc2, #9dd5e900);
+    // transform: translateY(0px);
+    opacity: 1; // 투명
+  }
+  100% {
+    background: #9dd5e9;
+    color: black;
+    // background-image: linear-gradient(to bottom, #ffc34080, #9dd5e900);
+    // transform: translateY(-200px);
+    opacity: 1; // 불투명
+  }
 }
 
 @keyframes overLapNight {
-    0% {
-        background: #9dd5e9;
-        color: black;
-        // background-image: linear-gradient(to bottom, #ffc34080, #9dd5e900);  
-        // transform: translateY(0px);  
-        opacity: 1; // 투명 
-    }
-    100% {
-        background: #27283c;
-        color: white;
-        // background-image: linear-gradient(to bottom, #27283cc2, #9dd5e900);  
-        // transform: translateY(-200px);   
-        opacity: 1; // 불투명
-    } 
+  0% {
+    background: #9dd5e9;
+    color: black;
+    // background-image: linear-gradient(to bottom, #ffc34080, #9dd5e900);
+    // transform: translateY(0px);
+    opacity: 1; // 투명
+  }
+  100% {
+    background: #27283c;
+    color: white;
+    // background-image: linear-gradient(to bottom, #27283cc2, #9dd5e900);
+    // transform: translateY(-200px);
+    opacity: 1; // 불투명
+  }
 }
 
 .area {
-    position: relative;
-    width: 1024px;
-    height: 600px; 
-    border: 3px solid rgb(196, 188, 179);   // 영역 표시 위해 임시로
+  position: relative;
+  width: 1024px;
+  height: 600px;
+  border: 3px solid rgb(196, 188, 179); // 영역 표시 위해 임시로
 }
- 
 
 .dayMode {
-    background: #9dd5e9;
-    // color: black; 
-    animation: overLapDay 2s ease-in-out;   
-    z-index: 1;
+  background: #9dd5e9;
+  // color: black;
+  animation: overLapDay 2s ease-in-out;
+  z-index: 1;
 }
 
 .nightMode {
-    // background: rgba(153, 205, 50, 0.55); 
-    background: #27283c;
-    // color: white; 
-    animation: overLapNight 2s ease-in-out;  
-    z-index: 1;
-} 
+  // background: rgba(153, 205, 50, 0.55);
+  background: #27283c;
+  // color: white;
+  animation: overLapNight 2s ease-in-out;
+  z-index: 1;
+}
 
-.userArea { 
-    min-width: 180px;
-    min-height: 30px;
-    display: inline-flex;
-    align-items: center;
-    margin-right: 5px;
-} 
+.userArea {
+  min-width: 180px;
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+}
 
-.rdBox1 { 
-    border: 1px solid;
-    border-radius: 10px;
-} 
+.rdBox1 {
+  border: 1px solid;
+  border-radius: 10px;
+}
 
-.span  {
-    margin-left: 10px;
-} 
+.span {
+  margin-left: 10px;
+}
 
 .span.desc {
-    color: red;
-    font-size: 12px; 
-    margin-top: -6px;
-} 
- 
+  color: red;
+  font-size: 12px;
+  margin-top: -6px;
+}
 
-.linkItem  {
-    color: inherit;
-    text-decoration: inherit;
-} 
+.linkItem {
+  color: inherit;
+  text-decoration: inherit;
+}
 
-.linkItem.none  {
-    color: gray; 
-} 
+.linkItem.none {
+  color: gray;
+}
 
+.linkBtn {
+  min-height: 30px;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-right: "5px";
+}
 
-.linkBtn  {
-    min-height: 30px;
-    min-width: 120px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid;
-    border-radius: 10px;
-    margin-right: "5px";
-} 
-
-.linkBtn.none  {
-    background: lightgrey;
-} 
+.linkBtn.none {
+  background: lightgrey;
+}
 
 .on {
-    display: "";
+  display: "";
 }
 
 .off {
-    display: none;
-} 
+  display: none;
+}

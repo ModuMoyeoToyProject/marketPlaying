@@ -1,84 +1,82 @@
-.Inventory {
-  .inventory_room {
+.inventory_room {
+  display: flex;
+
+  .stuffs {
+    width: 60vw;
+
+    .stuff {
+      width: 20%;
+      background-color: blanchedalmond;
+      text-align: center;
+      padding: 10px;
+
+      &.noAmount {
+        filter: grayscale(100%);
+      }
+      img {
+        width: 60%;
+        float: left;
+      }
+
+      p {
+        line-height: 60px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .stuffs2 {
+    width: 100vw;
+
+    .stuff {
+      width: 10%;
+      background-color: blanchedalmond;
+      text-align: center;
+      padding: 10px;
+
+      &.noAmount {
+        filter: grayscale(100%);
+      }
+      img {
+        width: 60%;
+        float: left;
+      }
+
+      p {
+        line-height: 60px;
+        font-weight: 700;
+      }
+    }
+  }
+  .goods {
     display: flex;
+    background-color: antiquewhite;
+    border: 1px solid #444444;
 
-    .stuffs {
-      width: 60vw;
-
-      .stuff {
-        width: 20%;
-        background-color: blanchedalmond;
-        text-align: center;
-        padding: 10px;
-
-        &.noAmount {
-          filter: grayscale(100%);
-        }
-        img {
-          width: 60%;
-          float: left;
-        }
-
-        p {
-          line-height: 60px;
-          font-weight: 700;
-        }
-      }
-    }
-
-    .stuffs2 {
-      width: 100vw;
-
-      .stuff {
-        width: 10%;
-        background-color: blanchedalmond;
-        text-align: center;
-        padding: 10px;
-
-        &.noAmount {
-          filter: grayscale(100%);
-        }
-        img {
-          width: 60%;
-          float: left;
-        }
-
-        p {
-          line-height: 60px;
-          font-weight: 700;
-        }
-      }
-    }
-    .goods {
-      display: flex;
-      background-color: antiquewhite;
+    .goods_info {
+      width: 250px;
+      height: 250px;
+      padding: 20px;
       border: 1px solid #444444;
+      margin: 2px;
+      background-color: white;
 
-      .goods_info {
-        width: 250px;
-        height: 250px;
-        padding: 20px;
-        border: 1px solid #444444;
-        margin: 2px;
-        background-color: white;
-
-        .goods_name {
-          margin-bottom: 30px;
-        }
+      .goods_name {
+        margin-bottom: 30px;
       }
+    }
 
-      .goods_img {
+    .goods_img {
+      width: 250px;
+      height: 250px;
+      padding: 20px;
+      border: 1px solid #444444;
+      margin: 2px;
+      background-color: white;
+
+      img {
         width: 250px;
         height: 250px;
-        padding: 20px;
-        border: 1px solid #444444;
-        margin: 2px;
-        background-color: white;
-
-        img {
-          width: 250px;
-          height: 250px;
-        }
       }
     }
   }
