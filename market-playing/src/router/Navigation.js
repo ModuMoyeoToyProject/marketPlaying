@@ -8,6 +8,9 @@ import Street from "../pages/Street";
 import GameMain from "../pages/GameMain";
 import PageList from "../pages/PageList";
 import UserInfoTest from "../pages/UserInfoTest";
+import Login from "../pages/Login";
+import Join from "../pages/Join";
+import Modu from "../pages/Main";
 import "../styles/App.scss";
 
 function Navigation() {
@@ -15,6 +18,9 @@ function Navigation() {
     <Router className="main">
       <Routes>
         <Route exact path="/" element={<PageList />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/modu" element={<Modu />} />
         <Route path="/lake" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/inventory" element={<Inventory />} />
