@@ -4,6 +4,7 @@
  * @History     : 2022.10.07.  리코더     페이지 생성/하돌님 Street에 유저정보추가
  *              : 2022.10.16.  리코더     하돌님 2차미션 추가 
  *              : 2022.10.16.  리코더     상점 구매 / 판매 
+ *              : 2022.11.14.  리코더     인벤토리 붙이기 
  * 
  */
 import React, { useState, useRef, useEffect } from 'react';
@@ -16,6 +17,7 @@ import styled from "styled-components";
 import Panel from "../components/street/Panel";
 import Lake from '../components/game/Lake';
 import ShopFormat from "../components/shop/ShopFormat";
+import Inventory from "./Inventory";
 
 const Container = styled.div`
   width: 100%;
@@ -226,6 +228,12 @@ const GameMain = () => {
       {(menuId=="lake")? 
         <div className={"area on"}>
           <Lake />
+        </div>
+      :<></>}   
+      {/* 가방 */}
+      {(menuId=="inventory")? 
+        <div className={"area on"}>
+          <Inventory />
         </div>
       :<></>}   
     </Container>
