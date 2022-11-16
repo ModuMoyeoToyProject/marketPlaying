@@ -8,6 +8,7 @@ import Street from "../pages/Street";
 import GameMain from "../pages/GameMain";
 import PageList from "../pages/PageList";
 import UserInfoTest from "../pages/UserInfoTest";
+import Status from "../pages/Status";
 import Login from "../pages/Login";
 import Join from "../pages/Join";
 import Modu from "../pages/Main";
@@ -23,6 +24,7 @@ function Navigation() {
         <Route path="/modu" element={<Modu />} />
         <Route path="/lake" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/status" element={<Status />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/chart" element={<Chart />} />
         <Route path="/street" element={<Street />} />
