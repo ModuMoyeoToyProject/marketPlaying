@@ -2,6 +2,8 @@
  * @FileName    : UserInfo.jsx
  * @Description : 개발항목 List
  * @History     : 2022.10.07.  리코더     유저정보 표기영역
+ *              : 2022.11.14.  리코더     인벤토리 붙이기 
+ * 
  *
  */
 import React, { useState, useRef, useEffect } from "react";
@@ -28,19 +30,11 @@ const GamePage = ({
 }) => {
   return (
     <div>
-      <div
-        style={{
-          justifyContent: "flex-start",
-          flexDirection: "row",
-          display: "flex",
-        }}
-      >
-        <div className="userArea rdBox1">
-          <span className="span">접속자 : </span>
-          <span className="span">{userName}</span>
-          <button className="span" onClick={fn_showBag()}>
-            {"가방"}
-          </button>
+    <div style={{justifyContent: "flex-start", flexDirection: "row", display: "flex"}}>
+        <div className="userArea rdBox1" >
+            <span className="span">접속자 : </span> 
+            <span className="span">{userName}</span> 
+            <button className="span" onClick={fn_move("inventory")}>{"가방"}</button>
         </div>
         <div className="userArea rdBox1">
           <span className="span">{isNight ? "Night" : "Day"}</span>
