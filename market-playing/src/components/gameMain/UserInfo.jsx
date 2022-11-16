@@ -10,6 +10,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Footer from "../common/Footer";
 import Header from "../common/Header";
 
+
 const padNumber = (num, length) => {
   // console.log("padNumber ", num, length);
   return String(num).padStart(length, "0");
@@ -30,11 +31,19 @@ const GamePage = ({
 }) => {
   return (
     <div>
-    <div style={{justifyContent: "flex-start", flexDirection: "row", display: "flex"}}>
-        <div className="userArea rdBox1" >
-            <span className="span">접속자 : </span> 
-            <span className="span">{userName}</span> 
-            <button className="span" onClick={fn_move("inventory")}>{"가방"}</button>
+      <div
+        style={{
+          justifyContent: "flex-start",
+          flexDirection: "row",
+          display: "flex",
+        }}
+      >
+        <div className="userArea rdBox1">
+          <span className="span">접속자 : </span>
+          <span className="span">{userName}</span>
+          <button className="span" onClick={fn_showBag()}>
+            {"가방"}
+          </button>
         </div>
         <div className="userArea rdBox1">
           <span className="span">{isNight ? "Night" : "Day"}</span>

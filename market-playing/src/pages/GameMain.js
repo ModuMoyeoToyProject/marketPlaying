@@ -179,42 +179,114 @@ const GameMain = () => {
     };
   };
 
+  const purchase_list = [
+    [
+      {
+        number: 1,
+        name: "철 가위",
+        img: require("../img/iron_scissor.png"),
+        money: "300원",
+        place: "집 앞",
+        usage: "양털 깎기",
+        power: "20%",
+        price: 300,
+      },
+      {
+        number: 2,
+        name: "파란 가위",
+        img: require("../img/blue_scissor.png"),
+        money: "3000원",
+        place: "집 앞",
+        usage: "양털 깎기",
+        power: "30%",
+        price: 3000,
+      },
+      {
+        number: 3,
+        name: "금색 가위",
+        img: require("../img/gold_scissor.jpeg"),
+        money: "30000원",
+        place: "집 앞",
+        usage: "양털 깎기",
+        power: "50%",
+        price: 30000,
+      },
+    ],
+    [
+      {
+        number: 4,
+        name: "철 망치",
+        img: require("../img/iron_hammer.png"),
+        money: "300원",
+        place: "집 앞",
+        usage: "집 짓기, 가구 만들기",
+        power: "20%",
+        price: 300,
+      },
+      {
+        number: 5,
+        name: "파란 망치",
+        img: require("../img/blue_hammer.jpeg"),
+        money: "3000원",
+        place: "집 앞",
+        usage: "집 짓기, 가구 만들기",
+        power: "30%",
+        price: 3000,
+      },
+      {
+        number: 6,
+        name: "금색 망치",
+        img: require("../img/gold_hammer.jpeg"),
+        money: "30000원",
+        place: "집 앞",
+        usage: "집 짓기, 가구 만들기",
+        power: "50%",
+        price: 30000,
+      },
+    ],
+  ];
+
   return (
     <div id="wrap">
       <Header />
-      <Container>
-        <Title>커비의 중앙시장 나들이</Title>
-        <UserInfo
-          userName={userName}
-          days={userDays}
-          hour={userHour}
-          min={userMin}
-          isNight={isNight}
-          fn_addTime={addTime}
-          amount={userWallet}
-          fn_updateBag={updateBag}
-          preMenu={preMenuId}
-          fn_move={changeMenu}
-          fn_showBag={showBag}
-        />
-        {/* 거리 */}
-        {menuId == "street" ? (
-          <div className={dayNightMode + " area on"}>
-            <Panel preMenu={preMenuId} fn_move={changeMenu} />
-          </div>
-        ) : (
-          <></>
-        )}
-        {/* 상점 */}
-        {menuId == "shop" ? (
-          <div className={"area on"}>
-            <ShopFormat imgStyle={"off"} fn_updateBag={updateBag} />
-          </div>
-        ) : (
-          <></>
-        )}
-        {/* 미니게임 */}
-        {menuId == "lake" ? (
+    <Container>
+      <Title>커비의 중앙시장 나들이</Title>
+      <UserInfo
+        userName={userName}
+        days={userDays}
+        hour={userHour}
+        min={userMin}
+        isNight={isNight}
+        fn_addTime={addTime}
+        amount={userWallet}
+        fn_updateBag={updateBag}
+        preMenu={preMenuId}
+        fn_move={changeMenu}
+        fn_showBag={showBag}
+      ></UserInfo>
+      {/* 거리 */}
+      {menuId == "street" ? (
+        <div className={dayNightMode + " area on"}>
+          <Panel preMenu={preMenuId} fn_move={changeMenu} />
+        </div>
+      ) : (
+        <></>
+      )}
+      {/* 상점 */}
+      {menuId == "shop" ? (
+        <div className={"area on"}>
+          <ShopFormat
+            shopName={"철물점"}
+            shopImg={require("../img/hardware_owner.jpeg")}
+            purchase_list={purchase_list}
+            fn_updateBag={updateBag}
+          />
+        </div>
+      ) : (
+        <></>
+      )}
+      {/* 미니게임 */}
+      {menuId == "lake" ? (
           <div className={"area on"}>
             <Lake />
           </div>
@@ -225,7 +297,9 @@ const GameMain = () => {
         <div className={"area on"}>
           <Inventory />
         </div>
-      :<></>}   
+      ) : (
+        <></>
+      )}  
       </Container>
       <Footer />
     </div>

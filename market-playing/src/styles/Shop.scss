@@ -1,10 +1,18 @@
 .shop_format {
   display: flex;
-  padding: 50px;
+  padding: 10px;
+
+  .seller {
+    width: 300px;
+  }
+
+  .sellerThink {
+    width: 300px;
+  }
 
   .thing_viewer {
     display: flex;
-    padding: 30px;
+    padding: 5px;
 
     .goods {
       display: flex;
@@ -12,29 +20,26 @@
       border: 1px solid #444444;
 
       .goods_info {
-        width: 250px;
-        height: 250px;
-        padding: 20px;
+        width: 150px;
+        height: 150px;
+        padding: 5px;
         border: 1px solid #444444;
         margin: 2px;
         background-color: white;
-
-        .goods_name {
-          margin-bottom: 50px;
-        }
+        font-size: 10px;
       }
 
       .goods_img {
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
         padding: 20px;
         border: 1px solid #444444;
         margin: 2px;
         background-color: white;
 
         img {
-          width: 250px;
-          height: 250px;
+          width: 150px;
+          height: 150px;
         }
       }
     }
@@ -55,6 +60,7 @@
         border-collapse: collapse;
         margin: 0 10px;
         padding-bottom: 10px;
+        height: 150px;
 
         tr,
         td {
@@ -63,15 +69,15 @@
         }
 
         td {
-          width: 200px;
+          width: 100px;
           padding: 10px;
           padding-bottom: 0;
           text-align: center;
         }
 
         img {
-          width: 200px;
-          height: 200px;
+          width: 100px;
+          height: 100px;
           background-color: white;
           border: 1px solid #444444;
         }
