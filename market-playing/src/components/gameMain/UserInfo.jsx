@@ -2,9 +2,14 @@
  * @FileName    : UserInfo.jsx
  * @Description : 개발항목 List
  * @History     : 2022.10.07.  리코더     유저정보 표기영역
+ *              : 2022.11.14.  리코더     인벤토리 붙이기 
+ * 
  *
  */
 import React, { useState, useRef, useEffect } from "react";
+import Footer from "../common/Footer";
+import Header from "../common/Header";
+
 
 const padNumber = (num, length) => {
   // console.log("padNumber ", num, length);

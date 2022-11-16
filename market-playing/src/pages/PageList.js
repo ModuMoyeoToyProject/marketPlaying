@@ -21,8 +21,8 @@ function PageList() {
           display: "flex",
         }}
       >
-        <Link className="linkItem " to="/">
-          <div className="linkBtn none"> 로그인 </div>
+        <Link className="linkItem " to="/modu">
+          <div className="linkBtn none"> 메인화면 </div>
         </Link>
         <Link className="linkItem" to="/main">
           {" "}
