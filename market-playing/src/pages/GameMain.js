@@ -2,10 +2,10 @@
  * @FileName    : GameMain.jsx
  * @Description : 개발항목 List
  * @History     : 2022.10.07.  리코더     페이지 생성/하돌님 Street에 유저정보추가
- *              : 2022.10.16.  리코더     하돌님 2차미션 추가 
- *              : 2022.10.16.  리코더     상점 구매 / 판매 
- *              : 2022.11.14.  리코더     인벤토리 붙이기 
- * 
+ *              : 2022.10.16.  리코더     하돌님 2차미션 추가
+ *              : 2022.10.16.  리코더     상점 구매 / 판매
+ *              : 2022.11.14.  리코더     인벤토리 붙이기
+ *
  */
 import React, { useState, useRef, useEffect } from "react";
 
@@ -249,57 +249,57 @@ const GameMain = () => {
   return (
     <div id="wrap">
       <Header />
-    <Container>
-      <Title>커비의 중앙시장 나들이</Title>
-      <UserInfo
-        userName={userName}
-        days={userDays}
-        hour={userHour}
-        min={userMin}
-        isNight={isNight}
-        fn_addTime={addTime}
-        amount={userWallet}
-        fn_updateBag={updateBag}
-        preMenu={preMenuId}
-        fn_move={changeMenu}
-        fn_showBag={showBag}
-      ></UserInfo>
-      {/* 거리 */}
-      {menuId == "street" ? (
-        <div className={dayNightMode + " area on"}>
-          <Panel preMenu={preMenuId} fn_move={changeMenu} />
-        </div>
-      ) : (
-        <></>
-      )}
-      {/* 상점 */}
-      {menuId == "shop" ? (
-        <div className={"area on"}>
-          <ShopFormat
-            shopName={"철물점"}
-            shopImg={require("../img/hardware_owner.jpeg")}
-            purchase_list={purchase_list}
-            fn_updateBag={updateBag}
-          />
-        </div>
-      ) : (
-        <></>
-      )}
-      {/* 미니게임 */}
-      {menuId == "lake" ? (
+      <Container>
+        <Title>커비의 중앙시장 나들이</Title>
+        <UserInfo
+          userName={userName}
+          days={userDays}
+          hour={userHour}
+          min={userMin}
+          isNight={isNight}
+          fn_addTime={addTime}
+          amount={userWallet}
+          fn_updateBag={updateBag}
+          preMenu={preMenuId}
+          fn_move={changeMenu}
+          fn_showBag={showBag}
+        ></UserInfo>
+        {/* 거리 */}
+        {menuId == "street" ? (
+          <div className={dayNightMode + " area on"}>
+            <Panel preMenu={preMenuId} fn_move={changeMenu} />
+          </div>
+        ) : (
+          <></>
+        )}
+        {/* 상점 */}
+        {menuId == "shop" ? (
+          <div className={"area on"}>
+            <ShopFormat
+              shopName={"철물점"}
+              shopImg={require("../img/hardware_owner.jpeg")}
+              purchase_list={purchase_list}
+              fn_updateBag={updateBag}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
+        {/* 미니게임 */}
+        {menuId == "lake" ? (
           <div className={"area on"}>
             <Lake />
           </div>
         ) : (
           <></>
         )}
-      {(menuId=="inventory")? 
-        <div className={"area on"}>
-          <Inventory />
-        </div>
-      ) : (
-        <></>
-      )}  
+        {menuId == "inventory" ? (
+          <div className={"area on"}>
+            <Inventory />
+          </div>
+        ) : (
+          <></>
+        )}
       </Container>
       <Footer />
     </div>
