@@ -15,18 +15,17 @@ export const useAuth = () => {
 
   async function signin(loginId, loginPW) {
     if (formValidate(loginId, loginPW)) {
-      const { data } = axios.get(`${api}/account/login`, {
-        params: {
-          id: loginId,
-          password: loginPW,
-        },
-      });
+      var params = new URLSearchParams();
+      params.append("username", loginId);
+      params.append("psw", loginPW);
+      const { data } = axios.post(`${api}/account/login`, params);
       if (data.result === "unsuccessful") {
         alert(data.type);
       } else {
         let sessionStorage = window.sessionStorage;
         sessionStorage.clear();
         sessionStorage.setItem("loginId", loginId);
+        console.log(data.result);
       }
     }
   }
@@ -35,13 +34,13 @@ export const useAuth = () => {
     if (formValidate(loginId, loginPW)) {
       var params = new URLSearchParams();
       params.append("id", loginId);
-      params.append("password", loginPW);
+      params.append("psw", loginPW);
       params.append("username", username);
       params.append("name", name);
       params.append("sex", sex);
       params.append("email", email);
       const { data } = axios.post(`${api}/account/register`, params);
-
+      console.log(data);
       if (data.result === "unsuccessful") {
         alert(data.type);
       } else {
