@@ -1,4 +1,16 @@
+import isLogin from "../../router/lib/isLogin";
+import { useAuth } from "./hooks/useAuth";
+import { useLogin, useRegister } from "./hooks/login";
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+  const { signout } = useAuth({ login: useLogin(), join: useRegister() });
+
+  const signOut = () => {
+    signout();
+    navigate("/modu");
+  };
   return (
     <div id="head" class="clfix">
       <div class="head_logo">
@@ -9,9 +21,15 @@ const Header = () => {
       <div class="head_wrap">
         <div class="login clfix">
           <ul>
-            <a href="/login">
-              <li>로그인</li>
-            </a>
+            {isLogin() ? (
+              <a onClick={signOut}>
+                <li>로그아웃</li>
+              </a>
+            ) : (
+              <a href="/login">
+                <li>로그인</li>
+              </a>
+            )}
             <a href="/join">
               <li>회원가입</li>
             </a>

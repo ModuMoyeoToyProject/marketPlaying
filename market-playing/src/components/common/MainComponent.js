@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import isLogin from "../../router/lib/isLogin";
 
 const MainComponent = () => {
   return (
@@ -9,7 +10,7 @@ const MainComponent = () => {
       <div id="section01" class="clfix">
         <div class="con_left">
           <div class="main_tit">
-            <p>Hello, Users</p>
+            <p>Hello, {isLogin() ? "" : "Users"}</p>
             <p>ToyProject</p>
           </div>
           <div class="main_btn">

@@ -6,13 +6,16 @@ import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "./hooks/useAuth";
 import { useUser } from "./hooks/useUser";
+import { useLogin, useRegister } from "./hooks/login";
+import isLogin from "../../router/lib/isLogin";
 
 const LoginComponent = () => {
   const navigate = useNavigate();
   const { user } = useUser();
-  const { signin } = useAuth();
+  const { signin } = useAuth({ login: useLogin(), join: useRegister() });
 
   useEffect(() => {
+    console.log(user);
     if (user) {
       navigate("/modu");
     }

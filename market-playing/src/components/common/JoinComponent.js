@@ -6,10 +6,12 @@ import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "./hooks/useAuth";
 import { useUser } from "./hooks/useUser";
+import { useLogin, useRegister } from "./hooks/login";
+import isLogin from "../../router/lib/isLogin";
 
 const JoinComponent = () => {
   const navigate = useNavigate();
-  const { signup } = useAuth();
+  const { signup } = useAuth({ login: useLogin(), join: useRegister() });
   const { user } = useUser();
 
   const [joinInfo, setJoinInfo] = useState({
@@ -25,11 +27,11 @@ const JoinComponent = () => {
 
   const { loginId, loginPW, loginPW2, username, name, sex, email } = joinInfo;
 
-  useEffect(() => {
-    if (user) {
-      navigate("/login");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (!isLogin()) {
+  //     navigate("/login");
+  //   }
+  // }, [user]);
 
   const joinChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +49,7 @@ const JoinComponent = () => {
       alert("비밀번호와 비밀번호 확인 값이 다릅니다.");
     }
     signup(loginId, loginPW, username, name, sex, email);
+    navigate("/modu");
   };
   return (
     <div id="wrap">
