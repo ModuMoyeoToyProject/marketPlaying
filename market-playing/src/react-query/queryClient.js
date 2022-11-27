@@ -4,7 +4,7 @@ import { QueryClient } from "react-query";
 export const ErrorHandler = () => {
   const [errorTitle, setErrorTitle] = useState("");
 
-  function queryErrorHandler(error: any) {
+  function queryErrorHandler(error) {
     const title =
       error instanceof Error ? error.message : "Error connecting to server";
 

@@ -23,7 +23,7 @@ import Footer from "../components/common/Footer";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 75.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,7 +250,7 @@ const GameMain = () => {
     <div id="wrap">
       <Header />
       <Container>
-        <Title>커비의 중앙시장 나들이</Title>
+        {/* <Title>커비의 중앙시장 나들이</Title> */}
         <UserInfo
           userName={userName}
           days={userDays}

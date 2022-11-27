@@ -61,6 +61,14 @@ function Navigation() {
             }
           />
           <Route
+            path="/modu2"
+            element={
+              <PrivateRoute>
+                <Modu />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path="/lake"
             element={
               <PrivateRoute>
