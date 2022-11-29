@@ -41,8 +41,6 @@ async function login(loginData) {
   params.append("psw", loginData.loginPW);
 
   axios.post(`${api}/account/login`, params).then((response) => {
-    console.log(response.data);
-    // return response.data;
     const data = response.data;
     if (data.result === "unsuccessful") {
       alert(data.type);
