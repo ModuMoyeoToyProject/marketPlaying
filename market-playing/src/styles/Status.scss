@@ -60,5 +60,93 @@
         }
       }
     }
+    .quest {
+      width: 600px;
+      height: 800px;
+      margin: 0px;
+
+      .quest_list {
+        width: 600px;
+        height: 450px;
+        border: solid 1px;
+        background-color: gainsboro;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .tablist { 
+          width: 330px;
+          height: 40px;
+          margin-bottom: 10px;
+          display: inline-flex; 
+        }
+
+        .quest_tab { 
+          width: 80px;
+          height: 30px;
+          margin-right: 10px;
+          border: solid 1px; 
+          display: flex;
+        }
+
+        .list { 
+          width: 600px;
+          height: 370px;
+          margin-right: 10px;    
+          table {
+            width: 100%;
+            margin: 0px;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+          }
+          th, td {
+            border: 1px solid #444444;
+          }
+        }
+      }
+      .quest_detail {
+        margin-top: 20px;
+        display: inline-flex;
+
+        .quest_contents { 
+          width: 330px;
+          height: 330px;
+          border: solid 1px;
+          background-color: gainsboro;
+          display: flex;
+          overflow-x: hidden;
+          overflow-y: auto;
+          white-space: pre-line;
+
+          // .name { 
+          //   width: 330px;
+          //   height: 30px; 
+          //   border: solid 1px;
+          // }
+          // .contents {
+          //   width: 330px;
+          //   height: 200px;
+          //   margin-top: 10px;
+          //   margin-bottom: 10px;
+          //   border: solid 1px;
+          // }
+          // .mission {
+          //   width: 330px;
+          //   height: 80px;
+          //   border: solid 1px;
+          // }
+        }
+        .quest_reward {
+          width: 250px;
+          height: 330px;
+          margin-left: 20px;
+          border: solid 1px;
+          background-color: gainsboro;
+          display: flex;
+          overflow-x: hidden;
+          overflow-y: auto;
+          white-space: pre-line;
+        }
+      }
+    }
   }
 }

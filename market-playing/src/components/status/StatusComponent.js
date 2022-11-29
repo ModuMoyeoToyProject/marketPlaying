@@ -1,5 +1,6 @@
 import { useState } from "react";
 import StatusMenu from "./StatusMenu";
+import QuestData from "./QuestData";
 
 const StatusComponent = () => {
   const data = {
@@ -22,6 +23,8 @@ const StatusComponent = () => {
 
   return (
     <div className="status_component">
+
+    {menu == "character" ? (
       <div className="character">
         <div className="character_status">
           <div className="main_status">
@@ -65,7 +68,17 @@ const StatusComponent = () => {
           </div>
         </div>
         <div className="character_item_list"></div>
-      </div>
+      </div> 
+    ) : (
+      <></>
+    )}
+
+    {/* 퀘스트 */}
+    {menu == "quest" ? (  
+      <QuestData />
+    ) : (
+      <></>
+    )}
       <StatusMenu menu={menu} setMenu={setMenu} />
     </div>
   );
