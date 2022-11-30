@@ -14,6 +14,7 @@ import Status from "../pages/Status";
 import Login from "../pages/Login";
 import Join from "../pages/Join";
 import Modu from "../pages/Main";
+import Attack from "../pages/Attack";
 import Loading from "../pages/Loading";
 import "../styles/App.scss";
 
@@ -129,6 +130,14 @@ function Navigation() {
             element={
               <PrivateRoute>
                 <UserInfoTest />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/attack"
+            element={
+              <PrivateRoute>
+                <Attack />
               </PrivateRoute>
             }
           />
