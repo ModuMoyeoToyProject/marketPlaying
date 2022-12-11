@@ -1,6 +1,6 @@
 import StatusComponent from "../components/status/StatusComponent";
 
-import "../styles/Status.scss";
+import "../styles/Status.css";
 
 const Status = () => {
   return (

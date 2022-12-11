@@ -11,7 +11,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 import UserInfo from "../components/gameMain/UserInfo";
 
-import "../styles/Game.scss";
+import "../styles/Game.css";
 
 import styled from "styled-components";
 import Panel from "../components/street/Panel";

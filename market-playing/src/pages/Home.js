@@ -1,6 +1,6 @@
 import Lake from "../components/game/Lake";
 import AutoUP from "../components/game/AutoUP";
-import "../styles/Home.scss";
+import "../styles/Home.css";
 
 function Home() {
   return (

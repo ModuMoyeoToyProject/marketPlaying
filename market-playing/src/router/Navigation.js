@@ -16,7 +16,7 @@ import Join from "../pages/Join";
 import Modu from "../pages/Main";
 import Attack from "../pages/Attack";
 import Loading from "../pages/Loading";
-import "../styles/App.scss";
+import "../styles/App.css";
 
 import { ErrorHandler } from "../react-query/queryClient";
 import PrivateRoute from "./lib/PrivateRoute";

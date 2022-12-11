@@ -1,0 +1,71 @@
+.inventory_room {
+  display: flex;
+}
+.inventory_room .stuffs {
+  width: 60vw;
+}
+.inventory_room .stuffs .stuff {
+  width: 20%;
+  background-color: blanchedalmond;
+  text-align: center;
+  padding: 10px;
+}
+.inventory_room .stuffs .stuff.noAmount {
+  filter: grayscale(100%);
+}
+.inventory_room .stuffs .stuff img {
+  width: 60%;
+  float: left;
+}
+.inventory_room .stuffs .stuff p {
+  line-height: 60px;
+  font-weight: 700;
+}
+.inventory_room .stuffs2 {
+  width: 100vw;
+}
+.inventory_room .stuffs2 .stuff {
+  width: 10%;
+  background-color: blanchedalmond;
+  text-align: center;
+  padding: 10px;
+}
+.inventory_room .stuffs2 .stuff.noAmount {
+  filter: grayscale(100%);
+}
+.inventory_room .stuffs2 .stuff img {
+  width: 60%;
+  float: left;
+}
+.inventory_room .stuffs2 .stuff p {
+  line-height: 60px;
+  font-weight: 700;
+}
+.inventory_room .goods {
+  display: flex;
+  background-color: antiquewhite;
+  border: 1px solid #444444;
+}
+.inventory_room .goods .goods_info {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border: 1px solid #444444;
+  margin: 2px;
+  background-color: white;
+}
+.inventory_room .goods .goods_info .goods_name {
+  margin-bottom: 30px;
+}
+.inventory_room .goods .goods_img {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border: 1px solid #444444;
+  margin: 2px;
+  background-color: white;
+}
+.inventory_room .goods .goods_img img {
+  width: 250px;
+  height: 250px;
+}

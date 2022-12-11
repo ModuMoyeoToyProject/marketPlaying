@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/**
+ * @FileName    : game.css
+ * @Description : 
+ * @History     : 2022.10.05.  리코더   임시페이지 생성
+ * 
+ */
+.gameStyle {
+  min-height: 100vh;
+  background: #9dd5e9;
+}
+
+.gradArea {
+  position: absolute;
+  top: 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 10;
+}
+
+@keyframes overLapDay {
+  0% {
+    background: #27283c;
+    color: white;
+    opacity: 1;
+  }
+  100% {
+    background: #9dd5e9;
+    color: black;
+    opacity: 1;
+  }
+}
+@keyframes overLapNight {
+  0% {
+    background: #9dd5e9;
+    color: black;
+    opacity: 1;
+  }
+  100% {
+    background: #27283c;
+    color: white;
+    opacity: 1;
+  }
+}
+.controlArea.dayMode {
+  background: #9dd5e9;
+  color: black;
+  animation: overLapDay 2s ease-in-out;
+}
+
+.controlArea.nightMode {
+  background: #27283c;
+  color: white;
+  animation: overLapNight 2s ease-in-out;
+}
+
+.controlArea {
+  position: absolute;
+  top: 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 100;
+}
+
+.controlArea.dayMode {
+  color: black;
+}
+
+.controlArea.nightMode {
+  color: white;
+}
+
+.btn {
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.pdd10 {
+  padding: 10px;
+}
+
+.pdd20 {
+  padding: 20px;
+}
+
+.pdd30 {
+  padding: 30px;
+}

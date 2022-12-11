@@ -1,5 +1,5 @@
 import InventoryFormat from "../components/inventory/InventoryFormat";
-import "../styles/Inventory.scss";
+import "../styles/Inventory.css";
 
 const Inventory = () => {
   return (
