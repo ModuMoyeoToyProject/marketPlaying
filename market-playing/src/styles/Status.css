@@ -1,0 +1,107 @@
+.status .status_component {
+  display: flex;
+}
+.status .status_component .menu .menu_btn {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid salmon;
+  width: 150px;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+.status .status_component .menu .menu_btn.selected {
+  background-color: salmon;
+  color: white;
+}
+.status .status_component > div:first-child {
+  width: 800px;
+}
+.status .status_component .mapFlex {
+  display: flex;
+}
+.status .status_component .mapFlex .arrowFlex {
+  display: flex;
+  height: 122px;
+}
+.status .status_component .mapFlex .mapNone {
+  width: 122px;
+  height: 122px;
+}
+.status .status_component .mapFlex .mapLocate {
+  border: 1px solid black;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+.status .status_component .mapFlex .mapLocate.currentMap {
+  background-color: salmon;
+}
+.status .status_component .mapFlex .arrowRight {
+  margin: 30px 0;
+  height: 40px;
+  width: 10px;
+  background-color: aqua;
+}
+.status .status_component .mapFlex .arrowBottom {
+  margin: 0 30px;
+  height: 10px;
+  width: 40px;
+  background-color: aqua;
+}
+.status .status_component .character .character_status .main_status {
+  display: flex;
+}
+.status
+  .status_component
+  .character
+  .character_status
+  .main_status
+  .clothes
+  > div,
+.status
+  .status_component
+  .character
+  .character_status
+  .main_status
+  .accessory
+  > div {
+  text-align: center;
+  font-size: 18px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin: 10px;
+  background-color: bisque;
+}
+.status
+  .status_component
+  .character
+  .character_status
+  .main_status
+  .character_info
+  > div {
+  font-size: 25px;
+  margin: 10px;
+  border: 1px solid bisque;
+  padding: 5px;
+}
+.status .status_component .character .character_status .sub_status .basic > div,
+.status
+  .status_component
+  .character
+  .character_status
+  .sub_status
+  .classic
+  > div {
+  font-size: 25px;
+  margin: 10px;
+  border: 1px solid bisque;
+  width: 120px;
+  padding: 5px;
+}
+.status .status_component .character .character_status .sub_status .basic,
+.status .status_component .character .character_status .sub_status .classic {
+  display: flex;
+}
