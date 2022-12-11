@@ -4,6 +4,7 @@ import { api } from "../../../Config";
 
 // async function getFoodEachData(id) {
 //   const { data } = await axios.get(`${api}/foods/purchase/each?id=${id}`);
+
 //   return data;
 // }
 
@@ -40,7 +41,7 @@ async function login(loginData) {
   params.append("username", loginData.loginId);
   params.append("psw", loginData.loginPW);
 
-  axios.post(`${api}/account/login`, params).then((response) => {
+  await axios.post(`${api}/account/login`, params).then((response) => {
     const data = response.data;
     if (data.result === "unsuccessful") {
       alert(data.type);
@@ -59,7 +60,7 @@ async function register(joinData) {
   params.append("name", joinData.name);
   params.append("sex", joinData.sex);
   params.append("email", joinData.email);
-  axios.post(`${api}/account/register`, params).then((response) => {
+  await axios.post(`${api}/account/register`, params).then((response) => {
     const data = response.data;
     if (data.result === "unsuccessful") {
       alert(data.type);

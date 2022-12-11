@@ -15,7 +15,6 @@ const LoginComponent = () => {
   const { signin } = useAuth({ login: useLogin(), join: useRegister() });
 
   useEffect(() => {
-    console.log(user);
     if (user) {
       navigate("/modu");
     }

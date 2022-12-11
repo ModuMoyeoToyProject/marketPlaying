@@ -23,7 +23,8 @@ import PrivateRoute from "./lib/PrivateRoute";
 import PublicRoute from "./lib/PublicRoute";
 
 function Navigation() {
-  const { BackendErrorImportError, queryClient } = ErrorHandler();
+  const { queryClient } = ErrorHandler();
+
   return (
     <QueryClientProvider client={queryClient}>
       <Router className="main">

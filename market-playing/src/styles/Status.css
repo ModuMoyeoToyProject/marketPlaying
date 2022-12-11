@@ -15,6 +15,41 @@
   background-color: salmon;
   color: white;
 }
+.status .status_component > div:first-child {
+  width: 800px;
+}
+.status .status_component .mapFlex {
+  display: flex;
+}
+.status .status_component .mapFlex .arrowFlex {
+  display: flex;
+  height: 122px;
+}
+.status .status_component .mapFlex .mapNone {
+  width: 122px;
+  height: 122px;
+}
+.status .status_component .mapFlex .mapLocate {
+  border: 1px solid black;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+.status .status_component .mapFlex .mapLocate.currentMap {
+  background-color: salmon;
+}
+.status .status_component .mapFlex .arrowRight {
+  margin: 30px 0;
+  height: 40px;
+  width: 10px;
+  background-color: aqua;
+}
+.status .status_component .mapFlex .arrowBottom {
+  margin: 0 30px;
+  height: 10px;
+  width: 40px;
+  background-color: aqua;
+}
 .status .status_component .character .character_status .main_status {
   display: flex;
 }
