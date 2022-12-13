@@ -1,0 +1,85 @@
+{
+  "main-square": {
+    "name": "중앙 광장",
+    "background": "yellowgreen",
+    "warpArea": [
+      {
+        "id": "shop-street",
+        "name": "상점가",
+        "position": {
+          "x": 994,
+          "y": 200
+        },
+        "scale": {
+          "x": 30,
+          "y": 120
+        }
+      },
+      {
+        "id": "mountain",
+        "name": "마을 뒷 산",
+        "position": {
+          "x": 0,
+          "y": 200
+        },
+        "scale": {
+          "x": 30,
+          "y": 120
+        }
+      }
+    ],
+    "buildingArea": []
+  },
+  "shop-street": {
+    "name": "상점가",
+    "background": "green",
+    "warpArea": [
+      {
+        "id": "main-square",
+        "name": "중앙 광장",
+        "position": {
+          "x": 0,
+          "y": 200
+        },
+        "scale": {
+          "x": 30,
+          "y": 120
+        }
+      }
+    ],
+    "buildingArea": [
+      {
+        "id": "store",
+        "name": "상점",
+        "position": {
+          "x": 750,
+          "y": 300
+        },
+        "scale": {
+          "x": 240,
+          "y": 200
+        },
+        "src": "../../img/store_1.png"
+      }
+    ],
+    "mountain": {
+      "name": "마을 뒷 산",
+      "background": "green",
+      "warpArea": [
+        {
+          "id": "main-square",
+          "name": "중앙 광장",
+          "position": {
+            "x": 994,
+            "y": 200
+          },
+          "scale": {
+            "x": 30,
+            "y": 120
+          }
+        }
+      ],
+      "buildingArea": []
+    }
+  }
+}
