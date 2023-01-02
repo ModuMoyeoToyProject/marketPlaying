@@ -19,7 +19,7 @@ import Loading from "../pages/Loading";
 import "../styles/App.css";
 
 import { ErrorHandler } from "../react-query/queryClient";
-import PrivateRoute from "./lib/PrivateRoute";
+import PublicRoute from "./lib/PublicRoute";
 import PublicRoute from "./lib/PublicRoute";
 
 function Navigation() {
@@ -65,81 +65,81 @@ function Navigation() {
           <Route
             path="/modu2"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Modu />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/lake"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Home />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/shop"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Shop />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/status"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Status />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/inventory"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Inventory />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/chart"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Chart />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/street"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Street />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/main"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <GameMain />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/userInfoTest"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <UserInfoTest />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
           <Route
             path="/attack"
             element={
-              <PrivateRoute>
+              <PublicRoute>
                 <Attack />
-              </PrivateRoute>
+              </PublicRoute>
             }
           />
         </Routes>
