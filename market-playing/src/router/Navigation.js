@@ -20,7 +20,7 @@ import "../styles/App.css";
 
 import { ErrorHandler } from "../react-query/queryClient";
 import PublicRoute from "./lib/PublicRoute";
-import PublicRoute from "./lib/PublicRoute";
+import PrivateRoute from "./lib/PrivateRoute";
 
 function Navigation() {
   const { queryClient } = ErrorHandler();
