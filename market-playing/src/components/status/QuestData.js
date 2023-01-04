@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"; 
+import React, { useState, useRef, useEffect } from "react";
 
 
 const QuestData = (props) => { 
@@ -139,61 +139,56 @@ const QuestData = (props) => {
     </div>
     <div className="quest_detail"> 
       <div className="quest_contents">  
-        <div className="quest_header">
-          <div className="quest_from">
-            <img className="neighbor" src={detailData?.fromImg} />
-          </div>
-          <div className="quest_title">
-          {detailData?.name}
-          </div>
+      {detailData?
+      <> 
+      <div className="quest_header">
+        <div className="quest_from">
+          <img className="neighbor" src={detailData?.fromImg} />
         </div>
-        <div className="quest_detail">
-          {detailData?.contents}  
-        </div> 
-        <div className="quest_mission">
-        <table>
-            <colgroup>
-              <col />
-              <col style={{width: '100px'}}/>
-            </colgroup>
-        {detailData?.missions?.map((el, ind) => ( 
-          <tr>
-            <td>{el.item}</td>
-            <td>{el.count}/{el.amount}</td>
-          </tr>
-        ))}
-        </table> 
-        </div> 
+        <div className="quest_title">
+        {detailData?.name}
+        </div>
+      </div>
+      <div className="quest_detail">
+        {detailData?.contents}  
+      </div> 
+      <div className="quest_mission">
+      <table>
+          <colgroup>
+            <col />
+            <col style={{width: '100px'}}/>
+          </colgroup>
+      {detailData?.missions?.map((el, ind) => ( 
+        <tr>
+          <td>{el.item}</td>
+          <td>{el.count}/{el.amount}</td>
+        </tr>
+      ))}
+      </table> 
+      </div> 
+      </>:<></>}
       </div>
       <div className="quest_reward"> 
-        <div className="reword_title"> 
-        <span>{"퀘스트 보상"}</span>
-        </div>
-        <div className="reword_list"> 
-          {/* {detailData?.reword?.map((el, ind) => (  
-            <div className="reword_item">
-              <div className="reword_img">
+      {detailData?
+      <>
+      <div className="reword_title"> 
+      <span>{"퀘스트 보상"}</span>
+      </div>
+      <div className="reword_list">  
+        <table>
+          {detailData?.reword?.map((el, ind) => (  
+            <tr className="reword_item">
+              <td className="reword_img">
               <img src={el.img} />
-              </div>
-              <div className="reword_detail">
+              </td>
+              <td className="reword_detail">
                 <span>{el.name}</span> 
-              </div>
-
-            </div>
-          ))}  */}
-          <table>
-            {detailData?.reword?.map((el, ind) => (  
-              <tr className="reword_item">
-                <td className="reword_img">
-                <img src={el.img} />
-                </td>
-                <td className="reword_detail">
-                  <span>{el.name}</span> 
-                </td>
-              </tr>
-            ))} 
-          </table>
-        </div>  
+              </td>
+            </tr>
+          ))} 
+        </table>
+      </div>  
+      </>:<></>}
       </div>
     </div>
   </div>
