@@ -2,6 +2,7 @@ import { useState } from "react";
 import Character from "./element/Character";
 import Map from "./element/Map";
 import StatusMenu from "./StatusMenu";
+import QuestData from "./QuestData";
 
 const StatusComponent = () => {
   const [menu, setMenu] = useState("character");
@@ -12,9 +13,12 @@ const StatusComponent = () => {
         <Character />
       ) : menu === "map" ? (
         <Map />
+      ) : menu === "quest" ? (
+        <QuestData />
       ) : (
         <Character />
       )}
+
       <StatusMenu menu={menu} setMenu={setMenu} />
     </div>
   );

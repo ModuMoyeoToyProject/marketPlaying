@@ -1,0 +1,256 @@
+.status {
+  .status_component {
+    display: flex;
+
+    .menu {
+      .menu_btn {
+        cursor: pointer;
+        background-color: white;
+        border: 2px solid salmon;
+        width: 150px;
+        font-size: 25px;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+
+        &.selected {
+          background-color: salmon;
+          color: white;
+        }
+      }
+    }
+
+    .character {
+      .character_status {
+        .main_status {
+          display: flex;
+
+          .clothes > div,
+          .accessory > div {
+            text-align: center;
+            font-size: 18px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            margin: 10px;
+            background-color: bisque;
+          }
+
+          .character_info > div {
+            font-size: 25px;
+            margin: 10px;
+            border: 1px solid bisque;
+            padding: 5px;
+          }
+        }
+        .sub_status {
+          .basic > div,
+          .classic > div {
+            font-size: 25px;
+            margin: 10px;
+            border: 1px solid bisque;
+            width: 120px;
+            padding: 5px;
+          }
+
+          .basic,
+          .classic {
+            display: flex;
+          }
+        }
+      }
+    }
+    .quest {
+        width: 760px;
+        height: 800px;
+        margin: auto;
+        margin-top: 10px;
+  
+        .quest_list {
+          width: 760px;
+          height: 450px;
+          border: solid 2px bisque;
+        //   background-color: gainsboro;
+          overflow-x: hidden;
+          overflow-y: auto;
+  
+          .tablist { 
+            width: 330px;
+            height: 40px;
+            margin-top: 10px;
+            // margin-bottom: 10px;
+            display: inline-flex; 
+          }
+  
+          .quest_tab { 
+            width: 80px;
+            height: 30px;
+            margin-right: 10px;
+            border: solid 2px bisque; 
+            background-color: bisque;
+            display: flex;
+            align-items: center; 
+
+            span {
+              margin: auto;
+            } 
+          } 
+          .quest_tab.on {
+            background-color: white; 
+          }
+  
+          .list { 
+            width: 95%;
+            height: calc(100%-300px);
+            margin: auto;    
+            table {
+              width: 100%;
+              // min-height: 200px;
+              margin: 0px;
+            //   border: 2px solid bisque;
+              border-collapse: collapse;
+            }
+            tr {
+              height: 35px;
+            }
+            th, td {
+              border: 2px solid bisque;
+              span {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        .quest_detail {
+          margin-top: 20px;
+          display: inline-flex;
+ 
+          .quest_contents { 
+            width: 430px;
+            height: 330px;
+            border: solid 2px bisque;
+            // background-color: gainsboro;
+            // display: flex;
+            overflow-x: hidden;
+            overflow-y: auto;
+            white-space: pre-line; 
+
+            .quest_header {
+              // border: solid 2px bisque;
+              display: block;
+
+              .quest_from {
+                // border: solid 2px bisque;
+                display: inline-block;
+                width: 150px;
+                height: 110px;
+                align-items: center; 
+                margin: 5px; 
+
+                .neighbor {
+                  max-width: 150px;
+                  max-height: 100px;
+                  object-fit: contain;
+                  margin: auto; 
+                }
+              }
+              .quest_title {
+                // border: solid 2px bisque;
+                display: inline-block;
+                width: 240px;
+                position: sticky;
+                top: 90px;
+              }
+            }
+
+            .quest_detail {
+              border: solid 2px bisque;
+              display: block;
+              margin: auto;
+              width: 90%;
+              height: 35%;
+            }
+
+            .quest_mission {
+              border: solid 2px bisque; 
+              display: block;
+              margin: auto;
+              margin-top: 5px;
+              width: 90%;
+              height: 20%;
+
+              table {
+                width: 90%;
+                margin: auto;
+              }
+            }
+
+            .quest_reward {
+              border: solid 2px bisque;
+              display: block;
+            }
+          }
+          .quest_reward {
+            width: 300px;
+            height: 330px;
+            margin-left: 20px;
+            border: solid 2px bisque;
+            // background-color: gainsboro;
+            display: block;
+            overflow-x: hidden;
+            overflow-y: auto;
+            white-space: pre-line;
+
+            .reword_title {
+              // border: solid 2px bisque;
+              width: 95%;   
+              height: 40px;
+              align-items: center;
+              display: inline-flex;
+              margin-bottom: 2px;
+
+              span {
+                margin: auto;
+                font-weight: 700;
+                font-size: x-large;
+              }
+            }
+
+            .reword_list {
+              border: solid 2px bisque;
+              width: 95%;     
+              height: 270px;        
+            }
+
+            .reword_item {
+              display: block;
+              margin: auto;
+
+              .reword_img {
+                border: solid 2px bisque;
+                display: inline-block;       
+                width: 60px;    
+                height: 60px;     
+                margin-bottom: 2px;
+                margin-right: 5px;
+                
+                img {
+                  max-width: 58px;    
+                  max-height: 58px;     
+                  object-fit: contain;
+                  margin: auto; 
+                }
+              }
+              .reword_detail {
+                // border: solid 2px bisque;
+                display: inline-block; 
+                width: 180px;
+                height: 60px; 
+                margin-bottom: 2px;
+              }
+            }
+          }
+        }
+      }
+  }
+}
