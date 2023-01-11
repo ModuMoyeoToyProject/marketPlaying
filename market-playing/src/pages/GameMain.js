@@ -18,6 +18,7 @@ import Panel from "../components/street/Panel";
 import Lake from "../components/game/Lake";
 import ShopFormat from "../components/shop/ShopFormat";
 import Inventory from "./Inventory";
+import Status from "./Status";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 
@@ -293,6 +294,15 @@ const GameMain = () => {
         ) : (
           <></>
         )}
+        {/* status */}
+        {menuId == "status" ? (
+          <div className={"area on"}>
+            <Status />
+          </div>
+        ) : (
+          <></>
+        )}
+        {/* 가방 */}
         {menuId == "inventory" ? (
           <div className={"area on"}>
             <Inventory />
