@@ -18,7 +18,7 @@ const Skills = () => {
       level: "",
       skillPoint: "",
       skillExp: "",
-      skillImg: " ",
+      skillImg: "",
     },
     {
       type: "ligntning",
@@ -27,7 +27,7 @@ const Skills = () => {
       level: "",
       skillPoint: "",
       skillExp: "",
-      skillImg: " ",
+      skillImg: "",
     },
   ];
 
