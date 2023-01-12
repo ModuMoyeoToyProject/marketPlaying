@@ -119,14 +119,14 @@
 }
 
 .sheepArea .sheep1{  
-  border: 1px solid bisque;
+  /* border: 1px solid bisque; */
   position: absolute;
   bottom: 140px;
   left: 90px;
 }
 
 .sheepArea .sheep2{  
-  border: 1px solid bisque;
+  /* border: 1px solid bisque; */
   position: absolute;
   bottom: 40px;
   left: 10px;
@@ -134,8 +134,27 @@
 }
 
 .sheepArea .sheep3{  
-  border: 1px solid bisque;
+  /* border: 1px solid bisque; */
   position: absolute;
   bottom: 10px;
   left: 160px;
+}
+
+.sheepArea .shearing {
+  margin: auto;
+  position: absolute;
+  top: -30px;
+}
+
+.sheepArea .progress_bar {
+  margin: auto;
+  margin-top: -15px;  
+  width: 100px;
+  height: 15px;
+  background-color: #c2c2c2;
+}
+
+.sheepArea .progress_bar .progress {
+  height: 15px;
+  background-color: aquamarine;
 }
