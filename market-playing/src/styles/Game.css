@@ -102,3 +102,40 @@
 .off {
   display: none;
 }
+
+
+.sheepArea {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 320px;
+  height: 300px; 
+}
+
+.sheepArea img{ 
+  max-width: 150px;
+  max-height: 135px;
+  margin-top: 25px;
+}
+
+.sheepArea .sheep1{  
+  border: 1px solid bisque;
+  position: absolute;
+  bottom: 140px;
+  left: 90px;
+}
+
+.sheepArea .sheep2{  
+  border: 1px solid bisque;
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  transform: scaleX(-1);
+}
+
+.sheepArea .sheep3{  
+  border: 1px solid bisque;
+  position: absolute;
+  bottom: 10px;
+  left: 160px;
+}
