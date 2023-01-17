@@ -1,5 +1,5 @@
 * {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0;
 }
 
@@ -9,12 +9,14 @@ li {
 a {
   text-decoration: none;
   color: #555;
+  margin: 0 auto;
 }
 .clfix:before,
 .clfix:after {
   content: "";
   display: block;
   clear: both;
+  margin: 0 auto;
 }
 #wrap {
   position: relative;
@@ -22,36 +24,44 @@ a {
   height: 100%;
   box-sizing: inherit;
   display: block;
+  margin: 0 auto;
 }
 
 /* head */
 #head {
   width: 1200px;
   display: flex;
+  margin: 0 auto;
 }
 #head .head_logo {
   width: 200px;
+  margin: 0 auto;
 }
 #head .head_logo a h2 {
   font-size: 30px;
   color: #222;
   padding: 20px 0;
+  margin: 0 auto;
 }
 #head .head_logo a:hover h2 {
   color: #666;
+  margin: 0 auto;
 }
 #head .head_wrap {
   display: block;
   width: 1000px;
+  margin: 0 auto;
 }
 #head .head_wrap .login {
   position: relative;
   padding: 20px 0;
+  margin: 0 auto;
 }
 #head .head_wrap .login > ul {
   position: absolute;
   right: 40px;
   display: flex;
+  margin: 0 auto;
 }
 #head .head_wrap .login > ul > a {
 }
@@ -67,12 +77,14 @@ a {
 #head .head_wrap .menu {
   position: relative;
   width: 1000px;
+  margin: 0 auto;
   padding: 20px 0;
 }
 #head .head_wrap .menu > ul {
   position: absolute;
   right: 40px;
   display: flex;
+  margin: 0 auto;
 }
 #head .head_wrap .menu > ul > a {
 }
@@ -90,6 +102,7 @@ a {
 #section01 {
   width: 1200px;
   display: flex;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 
@@ -117,6 +130,7 @@ a {
 #section01 .con_left .main_btn {
   width: 640px;
   display: flex;
+  margin: 0 auto;
 }
 #section01 .con_left .main_btn > ul {
   width: 260px;
@@ -125,11 +139,13 @@ a {
   padding: 20px;
   border-radius: 50px;
   background: #fff;
+  margin: 0 auto;
 }
 #section01 .con_left .main_btn ul:hover {
   background-image: linear-gradient(to right, #f0faff, #fff1f1);
   border: 0;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 #section01 .con_left .main_btn ul a li {
   font-size: 24px;
@@ -140,14 +156,17 @@ a {
 #section01 .con_right {
   width: 600px;
   text-align: center;
+  margin: 0 auto;
 }
 #section01 .con_right img {
   width: 280px;
+  margin: 0 auto;
   margin-top: 50px;
 }
 
 /* section02 */
 #section02 {
+  margin: 0 auto;
   width: 1200px;
   display: flex;
   margin-bottom: 78px;
@@ -158,59 +177,70 @@ a {
   width: 580px;
   height: 250px;
   border-radius: 25px;
+  margin: 0 auto;
 }
 #section02 .con_box p {
   font-size: 16px;
   line-height: 1.7;
   color: #222;
   padding: 40px;
+  margin: 0 auto;
   font-weight: 500;
 }
 #section02 .con_box .btn {
   position: absolute;
   bottom: 40px;
   right: 40px;
+  margin: 0 auto;
 }
 #section02 .con_box .btn a {
   padding-left: 20px;
   font-size: 15px;
   color: #666;
   font-weight: 500;
+  margin: 0 auto;
 }
 #section02 .con_box .btn a:hover {
   color: #222;
   font-weight: bold;
+  margin: 0 auto;
 }
 
 /* footer */
 footer {
   width: 100%;
   height: 140px;
+  margin: 0 auto;
   background-image: linear-gradient(to right, #f0faff, #fff1f1);
 }
 footer .con_txt {
   position: relative;
   width: 1200px;
   padding-top: 40px;
+  margin: 0 auto;
 }
 footer .con_txt h4 {
   font-size: 24px;
   color: #555;
+  margin: 0 auto;
 }
 footer .con_txt p {
   font-size: 12px;
   color: #222;
   padding: 10px 0;
+  margin: 0 auto;
 }
 footer .con_txt a {
   position: absolute;
   bottom: 10px;
+  margin: 0 auto;
   right: 0;
   z-index: 11;
 }
 footer .con_txt a img {
   animation: rotate_image 6s linear infinite;
   transform-origin: 50% 50%;
+  margin: 0 auto;
 }
 @keyframes rotate_image {
   100% {
@@ -223,6 +253,7 @@ footer .con_txt a img {
   width: 1200px;
   display: flex;
   padding: 70px 0;
+  margin: 0 auto;
 }
 #login_wrap .login {
   width: 560px;
@@ -230,10 +261,12 @@ footer .con_txt a img {
   border: 1px solid #ddd;
   border-radius: 25px;
   text-align: center;
+  margin: 0 auto;
 }
 #login_wrap .login h4 {
   font-size: 28px;
   color: #222;
+  margin: 0 auto;
 }
 #login_wrap .login form {
   display: flex;
@@ -245,6 +278,7 @@ footer .con_txt a img {
   margin: 40px 0 0 70px;
 }
 #login_wrap .login form input {
+  margin: 0 auto;
   width: 400px;
   height: 50px;
   border-radius: 25px;
@@ -255,17 +289,20 @@ footer .con_txt a img {
   margin: 12px 0;
 }
 #login_wrap .login > a > i {
+  margin: 0 auto;
   font-size: 12px;
   color: #555;
   font-style: normal;
   padding-left: 300px;
 }
 #login_wrap .login .btn {
+  margin: 0 auto;
   width: 100%;
   text-align: center;
   padding: 60px 0 80px 0;
 }
 #login_wrap .login .btn a {
+  margin: 0 auto;
   padding: 15px 160px;
   border-radius: 25px;
   background-image: linear-gradient(to right, #f0faff, #fff1f1);
@@ -274,29 +311,35 @@ footer .con_txt a img {
   color: #222;
 }
 #login_wrap .login .btn a:hover {
+  margin: 0 auto;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 #login_wrap .join {
+  margin: 0 auto;
   width: 560px;
   padding: 40px 0;
   border: 1px solid #ddd;
   border-radius: 25px;
 }
 #login_wrap .join h2 {
+  margin: 0 auto;
   font-size: 40px;
   padding: 20px 0 0 40px;
 }
 #login_wrap .join p {
+  margin: 0 auto;
   font-size: 18px;
   color: #555;
   padding: 20px 40px;
 }
 #login_wrap .join .btn {
+  margin: 0 auto;
   width: 100%;
   padding: 80px 40px;
 }
 #login_wrap .join .btn a {
+  margin: 0 auto;
   border: 1px solid #ddd;
   padding: 15px 40px;
   border-radius: 25px;
@@ -305,26 +348,31 @@ footer .con_txt a img {
   color: #555;
 }
 #login_wrap .join img {
+  margin: 0 auto;
   float: right;
   width: 180px;
 }
 
 /* join */
 .join_wrap {
+  margin: 0 auto;
   width: 1200px;
   padding: 70px 0;
 }
 .join_wrap .join_main {
+  margin: 0 auto;
   border: 1px solid #ddd;
   border-radius: 25px;
   padding: 40px 0;
 }
 .join_wrap .join_main h4 {
+  margin: 0 auto;
   text-align: center;
   font-size: 28px;
   color: #222;
 }
 .join_wrap .join_main form {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -335,6 +383,7 @@ footer .con_txt a img {
   transform: translateX(33%);
 }
 .join_wrap .join_main form input {
+  margin: 0 auto;
   width: 400px;
   height: 50px;
   border-radius: 25px;
@@ -346,29 +395,34 @@ footer .con_txt a img {
 }
 .join_wrap .join_main form .input_radio {
   width: 100%;
-  display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 .join_wrap .join_main form .input_radio input {
+  margin: 0 auto;
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 .join_wrap .join_main form .input_checkbox {
+  margin: 0 auto;
   width: 100%;
   font-size: 12px;
 }
 .join_wrap .join_main form .input_checkbox input {
+  margin: 0 auto;
   width: 12px;
   height: 12px;
   margin-right: 10px;
 }
 .join_wrap .join_main .btn {
+  margin: 0 auto;
   width: 100%;
   text-align: center;
   padding: 0 0 80px 0;
 }
 .join_wrap .join_main .btn a {
+  margin: 0 auto;
   padding: 15px 160px;
   border-radius: 25px;
   background-image: linear-gradient(to right, #f0faff, #fff1f1);
@@ -377,5 +431,6 @@ footer .con_txt a img {
   color: #222;
 }
 .join_wrap .join_main .btn a:hover {
+  margin: 0 auto;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
 }

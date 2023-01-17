@@ -13,3 +13,24 @@
   height: 20px;
   background-color: aquamarine;
 }
+
+.workplace {
+  margin-left: 700px;
+  margin-top: 200px;
+}
+
+.wood_root {
+  width: 200px;
+  z-index: -20;
+}
+
+.progress_bar_wood {
+  width: 150px;
+  margin-top: 0;
+}
+
+.prgoress_wood {
+  margin-left: 700px;
+  width: 200px;
+  margin-top: 180px;
+}
