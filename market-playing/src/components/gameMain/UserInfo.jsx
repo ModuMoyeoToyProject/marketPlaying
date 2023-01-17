@@ -41,9 +41,12 @@ const GamePage = ({
         <div className="userArea rdBox1">
           <span className="span">접속자 : </span>
           <span className="span">{userName}</span>
+          <button className="span" onClick={fn_move("status")}>
+            {"status"}
+          </button>
           <button className="span" onClick={fn_showBag()}>
             {"가방"}
-          </button>
+          </button> 
         </div>
         <div className="userArea rdBox1">
           <span className="span">{isNight ? "Night" : "Day"}</span>
