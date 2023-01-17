@@ -7,9 +7,6 @@ import fire from "../../img/fire.png";
 import storeImg from "../../img/store_1.png";
 //import mapData from "./mapData.json"; // 연동 미구현
 
-import Monster from "./Monster";
-
-
 const PanelContainer = styled.div`
   position: relative;
   width: 1024px;
@@ -68,19 +65,18 @@ const BuildingArea = styled.div`
   }
 `;
 
-// 2023.01 lemon 몬스터 수정으로 주석처리
-// const Monster = styled.div`
-//   left: ${({ data }) => `${data.position.x}px`};
-//   top: ${({ data }) => `${data.position.y}px`};
-//   width: ${({ data }) => `${data.scale.x}px`};
-//   height: ${({ data }) => `${data.scale.y}px`};
-//   position: absolute;
-//   z-index: 2;
-//   img {
-//     width: inherit;
-//     -webkit-user-drag: none;
-//   }
-// `;
+const Monster = styled.div`
+  left: ${({ data }) => `${data.position.x}px`};
+  top: ${({ data }) => `${data.position.y}px`};
+  width: ${({ data }) => `${data.scale.x}px`};
+  height: ${({ data }) => `${data.scale.y}px`};
+  position: absolute;
+  z-index: 2;
+  img {
+    width: inherit;
+    -webkit-user-drag: none;
+  }
+`;
 
 const Fire = styled.div`
   left: ${({ data }) => `${data.position.x}px`};
@@ -225,30 +221,30 @@ const Panel = (props) => {
     return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
   }
 
-  // setTimeout(() => {
-  //   setMonster(
-  //     monster.map((el) =>
-  //       el.position.x > 0 &&
-  //       el.position.x < 1024 &&
-  //       el.position.y > 0 &&
-  //       el.position.y < 600
-  //         ? {
-  //             ...el,
-  //             position: {
-  //               x: el.position.x + getRandomInt(-15, 15),
-  //               y: el.position.y + getRandomInt(-15, 15),
-  //             },
-  //           }
-  //         : {
-  //             ...el,
-  //             position: {
-  //               x: -50,
-  //               y: -50,
-  //             },
-  //           }
-  //     )
-  //   );
-  // }, 1000);
+  setTimeout(() => {
+    setMonster(
+      monster.map((el) =>
+        el.position.x > 0 &&
+        el.position.x < 1024 &&
+        el.position.y > 0 &&
+        el.position.y < 600
+          ? {
+              ...el,
+              position: {
+                x: el.position.x + getRandomInt(-15, 15),
+                y: el.position.y + getRandomInt(-15, 15),
+              },
+            }
+          : {
+              ...el,
+              position: {
+                x: -50,
+                y: -50,
+              },
+            }
+      )
+    );
+  }, 1000);
 
   //   setTimeout(() => {
   //     setMonster(
@@ -300,7 +296,6 @@ const Panel = (props) => {
       },
       visible: true,
       img: require("../../img/monster.gif"),
-      speed: 500,
     },
     {
       id: 2,
@@ -314,7 +309,6 @@ const Panel = (props) => {
       },
       visible: true,
       img: require("../../img/monster.gif"),
-      speed: 1000,
     },
     {
       id: 3,
@@ -328,7 +322,6 @@ const Panel = (props) => {
       },
       visible: true,
       img: require("../../img/monster.gif"),
-      speed: 700,
     },
     {
       id: 4,
@@ -342,7 +335,6 @@ const Panel = (props) => {
       },
       visible: true,
       img: require("../../img/monster.gif"),
-      speed: 850,
     },
   ]);
 
@@ -501,22 +493,15 @@ const Panel = (props) => {
         </BuildingArea>
       ))}
 
-      {/* {monster.map((item, index) => (
+      {monster.map((item, index) => (
         <Monster key={index} id={item.id} data={item}>
           <img id={item.id} src={item.img} alt={item.id} />
         </Monster>
-        
-      ))} */}
-
-      {monster.map((item, index) => 
-        <Monster key={index} id={item.id} 
-                      position={item.position} scale={item.scale}
-                      img={item.img}  speed={item.speed} />
-      )}
+      ))}
 
       {fires.map((item, index) => (
         <Fire key={index} id={item.id} data={item}>
-          <img id={item.id} src={fire} alt={item.id}/>
+          <img id={item.id} src={fire} alt={item.id} />
         </Fire>
       ))}
     </PanelContainer>

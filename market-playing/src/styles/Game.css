@@ -32,7 +32,7 @@
 .area {
   position: relative;
   width: 1024px;
-  height: 600px;
+  height: 700px;
   border: 3px solid #c4bcb3;
 }
 
@@ -101,4 +101,60 @@
 
 .off {
   display: none;
+}
+
+
+.sheepArea {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 320px;
+  height: 300px; 
+}
+
+.sheepArea img{ 
+  max-width: 150px;
+  max-height: 135px;
+  margin-top: 25px;
+}
+
+.sheepArea .sheep1{  
+  /* border: 1px solid bisque; */
+  position: absolute;
+  bottom: 140px;
+  left: 90px;
+}
+
+.sheepArea .sheep2{  
+  /* border: 1px solid bisque; */
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  transform: scaleX(-1);
+}
+
+.sheepArea .sheep3{  
+  /* border: 1px solid bisque; */
+  position: absolute;
+  bottom: 10px;
+  left: 160px;
+}
+
+.sheepArea .shearing {
+  margin: auto;
+  position: absolute;
+  top: -30px;
+}
+
+.sheepArea .progress_bar {
+  margin: auto;
+  margin-top: -15px;  
+  width: 100px;
+  height: 15px;
+  background-color: #c2c2c2;
+}
+
+.sheepArea .progress_bar .progress {
+  height: 15px;
+  background-color: aquamarine;
 }
