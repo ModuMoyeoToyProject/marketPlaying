@@ -5,6 +5,7 @@
 import Sheep from "./Sheep";
 
 const Sheeps = (props) => {
+  console.log(props)
   return (
     <>
       <div className={"sheepArea"}>

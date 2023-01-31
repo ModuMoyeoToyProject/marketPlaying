@@ -103,29 +103,28 @@
   display: none;
 }
 
-
 .sheepArea {
   position: absolute;
   bottom: 0px;
   left: 0px;
   width: 320px;
-  height: 300px; 
+  height: 300px;
 }
 
-.sheepArea img{ 
+.sheepArea img {
   max-width: 150px;
   max-height: 135px;
   margin-top: 25px;
 }
 
-.sheepArea .sheep1{  
+.sheepArea .sheep1 {
   /* border: 1px solid bisque; */
   position: absolute;
   bottom: 140px;
   left: 90px;
 }
 
-.sheepArea .sheep2{  
+.sheepArea .sheep2 {
   /* border: 1px solid bisque; */
   position: absolute;
   bottom: 40px;
@@ -133,7 +132,7 @@
   transform: scaleX(-1);
 }
 
-.sheepArea .sheep3{  
+.sheepArea .sheep3 {
   /* border: 1px solid bisque; */
   position: absolute;
   bottom: 10px;
@@ -148,7 +147,7 @@
 
 .sheepArea .progress_bar {
   margin: auto;
-  margin-top: -15px;  
+  margin-top: -15px;
   width: 100px;
   height: 15px;
   background-color: #c2c2c2;
@@ -158,3 +157,23 @@
   height: 15px;
   background-color: aquamarine;
 }
+
+.field {
+  width: 461px;
+  height: 253px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../img/field.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grass_box {
+  width: 80px;
+  height: 58px;
+  cursor: pointer;
+}
+
