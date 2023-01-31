@@ -6,7 +6,6 @@ const Sheep = (props) => {
   const [status, setStatus] = useState("full");
   const [sheepGrowNo, setSheepGrowNo] = useState(3);
   const [shearingFlag, setShearingFlag] = useState("succ");
-
   const progressRef = useRef(null);
   const [progressWidth, setProgressWidth] = useState(5);
   const [progressName, setProgressName] = useState({ display: "none" });

@@ -170,3 +170,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.grass_box {
+  width: 80px;
+  height: 58px;
+  cursor: pointer;
+}
+

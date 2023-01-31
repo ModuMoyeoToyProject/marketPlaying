@@ -215,13 +215,15 @@ const Panel = (props) => {
 
   const handleInside = (e) => {
     let { x, y } = e.target.getBoundingClientRect();
-    // console.log("handleInside: ",e.target.id);
+    console.log("handleInside: ", e.target.id);
     if (e.target.id == "sheep1") {
       moveCharacter(135, 420);
     } else if (e.target.id == "sheep2") {
       moveCharacter(61, 520);
     } else if (e.target.id == "sheep3") {
       moveCharacter(229, 543);
+    } else if (e.target.id == "grow") {
+      moveCharacter(720, 543);
     } else {
       moveCharacter(
         e.pageX - x < obj.sizeX / 2 ? obj.sizeX / 2 : e.pageX - x,
