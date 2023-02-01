@@ -15,6 +15,7 @@ import Login from "../pages/Login";
 import Join from "../pages/Join";
 import Modu from "../pages/Main";
 import Attack from "../pages/Attack";
+import Developer from "../pages/Developers";
 import Loading from "../pages/Loading";
 import "../styles/App.css";
 
@@ -139,6 +140,14 @@ function Navigation() {
             element={
               <PublicRoute>
                 <Attack />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/developers"
+            element={
+              <PublicRoute>
+                <Developer />
               </PublicRoute>
             }
           />
