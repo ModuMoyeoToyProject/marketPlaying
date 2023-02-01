@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/**
+ * @FileName    : Game.css
+ * @Description : 
+ * @History     : 2022.10.07.  리코더   생성
+ * 
+ */
+@keyframes overLapDay {
+  0% {
+    background: #27283c;
+    color: white;
+    opacity: 1;
+  }
+  100% {
+    background: #9dd5e9;
+    color: black;
+    opacity: 1;
+  }
+}
+@keyframes overLapNight {
+  0% {
+    background: #9dd5e9;
+    color: black;
+    opacity: 1;
+  }
+  100% {
+    background: #27283c;
+    color: white;
+    opacity: 1;
+  }
+}
+.area {
+  position: relative;
+  width: 1024px;
+  height: 700px;
+  border: 3px solid #c4bcb3;
+}
+
+.dayMode {
+  background: #9dd5e9;
+  animation: overLapDay 2s ease-in-out;
+  z-index: 1;
+}
+
+.nightMode {
+  background: #27283c;
+  animation: overLapNight 2s ease-in-out;
+  z-index: 1;
+}
+
+.userArea {
+  min-width: 180px;
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.rdBox1 {
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.span {
+  margin-left: 10px;
+}
+
+.span.desc {
+  color: red;
+  font-size: 12px;
+  margin-top: -6px;
+}
+
+.linkItem {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.linkItem.none {
+  color: gray;
+}
+
+.linkBtn {
+  min-height: 30px;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-right: "5px";
+}
+
+.linkBtn.none {
+  background: lightgrey;
+}
+
+.on {
+  display: "";
+}
+
+.off {
+  display: none;
+}
+
+.sheepArea {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 320px;
+  height: 300px;
+}
+
+.sheepArea img {
+  max-width: 150px;
+  max-height: 135px;
+  margin-top: 25px;
+}
+
+.sheepArea .sheep1 {
+  /* border: 1px solid bisque; */
+  position: absolute;
+  bottom: 140px;
+  left: 90px;
+}
+
+.sheepArea .sheep2 {
+  /* border: 1px solid bisque; */
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  transform: scaleX(-1);
+}
+
+.sheepArea .sheep3 {
+  /* border: 1px solid bisque; */
+  position: absolute;
+  bottom: 10px;
+  left: 160px;
+}
+
+.sheepArea .shearing {
+  margin: auto;
+  position: absolute;
+  top: -30px;
+}
+
+.sheepArea .progress_bar {
+  margin: auto;
+  margin-top: -15px;
+  width: 100px;
+  height: 15px;
+  background-color: #c2c2c2;
+}
+
+.sheepArea .progress_bar .progress {
+  height: 15px;
+  background-color: aquamarine;
+}
+
+.field {
+  width: 461px;
+  height: 253px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../img/field.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grass_box {
+  width: 80px;
+  height: 58px;
+  cursor: pointer;
+}
+

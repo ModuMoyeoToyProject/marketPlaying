@@ -7,7 +7,7 @@
 
 import { Link } from "react-router-dom";
 
-import "../styles/Game.scss";
+import "../styles/Game.css";
 
 function PageList() {
   return (

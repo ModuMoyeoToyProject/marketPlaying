@@ -1,0 +1,84 @@
+.shop_format {
+  display: flex;
+  padding: 10px;
+}
+.shop_format .seller {
+  width: 300px;
+}
+.shop_format .sellerThink {
+  width: 300px;
+}
+.shop_format .thing_viewer {
+  display: flex;
+  padding: 5px;
+}
+.shop_format .thing_viewer .goods {
+  display: flex;
+  background-color: antiquewhite;
+  border: 1px solid #444444;
+}
+.shop_format .thing_viewer .goods .goods_info {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  border: 1px solid #444444;
+  margin: 2px;
+  background-color: white;
+  font-size: 10px;
+}
+.shop_format .thing_viewer .goods .goods_img {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  border: 1px solid #444444;
+  margin: 2px;
+  background-color: white;
+}
+.shop_format .thing_viewer .goods .goods_img img {
+  width: 150px;
+  height: 150px;
+}
+.shop_format .purchaser .purchase_list {
+  display: flex;
+}
+.shop_format .purchaser .purchase_list .arrow {
+  width: 50px;
+  height: 50px;
+  margin: 36px auto;
+  font-size: 30px;
+}
+.shop_format .purchaser .purchase_list .purchase_table {
+  border-collapse: collapse;
+  margin: 0 10px;
+  padding-bottom: 10px;
+  height: 150px;
+}
+.shop_format .purchaser .purchase_list .purchase_table tr,
+.shop_format .purchaser .purchase_list .purchase_table td {
+  background-color: antiquewhite;
+  border: 2px solid #444444;
+}
+.shop_format .purchaser .purchase_list .purchase_table td {
+  width: 100px;
+  padding: 10px;
+  padding-bottom: 0;
+  text-align: center;
+}
+.shop_format .purchaser .purchase_list .purchase_table img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid #444444;
+}
+.shop_format .purchaser .purchase_list .purchase_table .money_tr {
+  background-color: antiquewhite;
+  height: auto;
+}
+.shop_format .purchaser .purchase_list .purchase_table .money_tr td {
+  padding-bottom: 15px;
+}
+.shop_format .purchaser .purchase_list .purchase_table .money {
+  background-color: white;
+  padding: 5px;
+  font-weight: bold;
+}

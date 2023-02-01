@@ -1,7 +1,7 @@
 import Hardware from "../components/shop/Hardware";
 import ShopFormat from "../components/shop/ShopFormat";
-import "../styles/Shop.scss";
-import "../styles/Inventory.scss";
+import "../styles/Shop.css";
+import "../styles/Inventory.css";
 
 const Shop = () => {
   const purchase_list = [

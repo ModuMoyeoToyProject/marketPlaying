@@ -11,19 +11,20 @@ import React, { useState, useRef, useEffect } from "react";
 
 import UserInfo from "../components/gameMain/UserInfo";
 
-import "../styles/Game.scss";
+import "../styles/Game.css";
 
 import styled from "styled-components";
 import Panel from "../components/street/Panel";
 import Lake from "../components/game/Lake";
 import ShopFormat from "../components/shop/ShopFormat";
 import Inventory from "./Inventory";
+import Status from "./Status";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 75.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,7 +251,7 @@ const GameMain = () => {
     <div id="wrap">
       <Header />
       <Container>
-        <Title>커비의 중앙시장 나들이</Title>
+        {/* <Title>커비의 중앙시장 나들이</Title> */}
         <UserInfo
           userName={userName}
           days={userDays}
@@ -293,6 +294,15 @@ const GameMain = () => {
         ) : (
           <></>
         )}
+        {/* status */}
+        {menuId == "status" ? (
+          <div className={"area on"}>
+            <Status />
+          </div>
+        ) : (
+          <></>
+        )}
+        {/* 가방 */}
         {menuId == "inventory" ? (
           <div className={"area on"}>
             <Inventory />

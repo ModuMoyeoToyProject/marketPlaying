@@ -1,0 +1,292 @@
+.status .status_component {
+  display: flex;
+}
+.status .status_component .menu .menu_btn {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid salmon;
+  width: 150px;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+.status .status_component .menu .menu_btn.selected {
+  background-color: salmon;
+  color: white;
+}
+.status .status_component > div:first-child {
+  width: 800px;
+}
+.status .status_component .mapFlex {
+  display: flex;
+}
+.status .status_component .mapFlex .arrowFlex {
+  display: flex;
+  height: 122px;
+}
+.status .status_component .mapFlex .mapNone {
+  width: 122px;
+  height: 122px;
+}
+.status .status_component .mapFlex .mapLocate {
+  border: 1px solid black;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.status .status_component .mapFlex .mapLocate.currentMap {
+  background-color: salmon;
+}
+.status .status_component .mapFlex .arrowRight {
+  margin: 30px 0;
+  height: 40px;
+  width: 10px;
+  background-color: aqua;
+}
+.status .status_component .mapFlex .arrowBottom {
+  margin: 0 30px;
+  height: 10px;
+  width: 40px;
+  background-color: aqua;
+}
+.status .status_component .mapFlex .arrowRightNone {
+  margin: 30px 0;
+  height: 40px;
+  width: 10px;
+  background-color: aqua;
+  visibility: hidden;
+}
+.status .status_component .mapFlex .arrowBottomNone {
+  margin: 0 30px;
+  height: 10px;
+  width: 40px;
+  background-color: aqua;
+  visibility: hidden;
+}
+.status .status_component .character .character_status .main_status {
+  display: flex;
+}
+.status
+  .status_component
+  .character
+  .character_status
+  .main_status
+  .clothes
+  > div,
+.status
+  .status_component
+  .character
+  .character_status
+  .main_status
+  .accessory
+  > div {
+  text-align: center;
+  font-size: 18px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin: 10px;
+  background-color: bisque;
+}
+.status
+  .status_component
+  .character
+  .character_status
+  .main_status
+  .character_info
+  > div {
+  font-size: 25px;
+  margin: 10px;
+  border: 1px solid bisque;
+  padding: 5px;
+}
+.status .status_component .character .character_status .sub_status .basic > div,
+.status
+  .status_component
+  .character
+  .character_status
+  .sub_status
+  .classic
+  > div {
+  font-size: 25px;
+  margin: 10px;
+  border: 1px solid bisque;
+  width: 120px;
+  padding: 5px;
+}
+.status .status_component .character .character_status .sub_status .basic,
+.status .status_component .character .character_status .sub_status .classic {
+  display: flex;
+}
+
+ 
+.status .status_component .quest {
+  width: 760px;
+  height: 700px;
+  margin: auto;
+  margin-top: 10px;
+}
+.status .status_component .quest .quest_list {
+  width: 760px;
+  height: 300px;
+  border: solid 2px bisque;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: 10px;
+}
+.status .status_component .quest .quest_list .tablist {
+  width: 330px;
+  height: 40px;
+  margin-top: 10px;
+  display: inline-flex;
+  margin-left: 7px;
+}
+.status .status_component .quest .quest_list .quest_tab {
+  width: 80px;
+  height: 30px;
+  margin-right: 10px;
+  border: solid 2px bisque;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+}
+.status .status_component .quest .quest_list .quest_tab span {
+  margin: auto;
+}
+.status .status_component .quest .quest_list .quest_tab.on {
+  background-color: white;
+}
+.status .status_component .quest .quest_list .list {
+  width: 95%;
+  height: calc(100%-300px);
+  /* margin: auto; */
+  margin-left: 20px;
+}
+.status .status_component .quest .quest_list .list table {
+  width: 100%;
+  margin: 0px;
+  border-collapse: collapse;
+}
+.status .status_component .quest .quest_list .list tr {
+  height: 35px;
+}
+.status .status_component .quest .quest_list .list th, .status .status_component .quest .quest_list .list td {
+  border: 2px solid bisque;
+}
+.status .status_component .quest .quest_list .list th span, .status .status_component .quest .quest_list .list td span {
+  margin-left: 5px;
+}
+.status .status_component .quest .quest_detail {
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-flex;
+}
+.status .status_component .quest .quest_detail .quest_contents {
+  width: 430px;
+  height: 330px;
+  border: solid 2px bisque;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-line; 
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_header {
+  display: block;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_header .quest_from {
+  display: inline-block;
+  width: 150px;
+  height: 110px;
+  align-items: center;
+  margin: 5px;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_header .quest_from .neighbor {
+  max-width: 150px;
+  max-height: 100px;
+  object-fit: contain;
+  margin: auto;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_header .quest_title {
+  display: inline-block;
+  width: 240px;
+  position: sticky;
+  top: 90px;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_detail {
+  border: solid 2px bisque;
+  display: block;
+  margin: auto;
+  width: 90%;
+  height: 35%;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_mission {
+  border: solid 2px bisque;
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+  width: 90%;
+  height: 20%;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_mission table {
+  width: 90%;
+  margin: auto;
+}
+.status .status_component .quest .quest_detail .quest_contents .quest_reward {
+  border: solid 2px bisque;
+  display: block;
+}
+.status .status_component .quest .quest_detail .quest_reward {
+  width: 300px;
+  height: 330px;
+  margin-left: 20px;
+  border: solid 2px bisque;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-line;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_title {
+  width: 95%;
+  height: 40px;
+  align-items: center;
+  display: inline-flex;
+  margin-bottom: 2px;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_title span {
+  margin: auto;
+  font-weight: 700;
+  font-size: x-large;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_list {
+  border: solid 2px bisque;
+  width: 95%;
+  height: 270px;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_item {
+  display: block;
+  margin: auto;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_item .reword_img {
+  border: solid 2px bisque;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_item .reword_img img {
+  max-width: 58px;
+  max-height: 58px;
+  object-fit: contain;
+  margin: auto;
+}
+.status .status_component .quest .quest_detail .quest_reward .reword_item .reword_detail {
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  margin-bottom: 2px;
+}
