@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const ShopFormat = (props) => {
+  // console.log(props)
   const { shopName, shopImg, purchase_list, fn_updateBag } = props;
   const [purchasePage, setPurchasePage] = useState(0);
   const [goods, setGoods] = useState([{}]);
@@ -29,7 +30,7 @@ const ShopFormat = (props) => {
     setGoods(
       purchases.filter(function (el) {
         return el.number === number;
-      })[0]
+      })[0],
     );
   };
 
@@ -151,14 +152,14 @@ const ShopFormat = (props) => {
                 ...small,
                 amount: small.amount - 1,
               }
-            : small
-        )
-      )
+            : small,
+        ),
+      ),
     );
   };
 
   const [think, setThink] = useState(
-    shopName + " 아저씨가 당신을 반갑게 맞이합니다."
+    shopName + " 아저씨가 당신을 반갑게 맞이합니다.",
   );
 
   return (
@@ -215,25 +216,27 @@ const ShopFormat = (props) => {
                 ◀
               </button>
               <table className="purchase_table">
-                <tr>
-                  {purchase_list[purchasePage].map((el, ind) => (
-                    <td key={"img_" + ind}>
-                      <img
-                        src={el.img}
-                        onClick={() => setGoodsNum(el.number)}
-                      />
-                    </td>
-                  ))}
-                  <td></td>
-                </tr>
-                <tr className="money_tr">
-                  {purchase_list[purchasePage].map((el, ind) => (
-                    <td key={"img_" + ind}>
-                      <span className="money">{el.money}</span>
-                    </td>
-                  ))}
-                  <td></td>
-                </tr>
+                <tbody>
+                  <tr>
+                    {purchase_list[purchasePage].map((el, ind) => (
+                      <td key={"img_" + ind}>
+                        <img
+                          src={el.img}
+                          onClick={() => setGoodsNum(el.number)}
+                        />
+                      </td>
+                    ))}
+                    <td></td>
+                  </tr>
+                  <tr className="money_tr">
+                    {purchase_list[purchasePage].map((el, ind) => (
+                      <td key={"img_" + ind}>
+                        <span className="money">{el.money}</span>
+                      </td>
+                    ))}
+                    {/* <td></td> */}
+                  </tr>
+                </tbody>
               </table>
               <button className="arrow" onClick={setNext}>
                 ▶
@@ -250,13 +253,13 @@ const ShopFormat = (props) => {
                 {el.map((small, ind2) => (
                   <td
                     className={small.amount === 0 ? "stuff noAmount" : "stuff"}
-                    onClick={
-                      small.amount !== 0 ? (
-                        () => setGoodsNum(small.number)
-                      ) : (
-                        <></>
-                      )
-                    }
+                    // onClick={
+                    //   small.amount !== 0 ? (
+                    //     () => setGoodsNum(small.number)
+                    //   ) : (
+                    //     <></>
+                    //   )
+                    // }
                   >
                     <img src={small.img} />
                     {small.amount !== 0 && <p>{small.amount}</p>}
@@ -264,9 +267,7 @@ const ShopFormat = (props) => {
                 ))}
               </tr>
             ))}
-            <tr>
-              <td></td>
-            </tr>
+            <tr>{/* <td></td> */}</tr>
           </tbody>
         </table>
       </div>
