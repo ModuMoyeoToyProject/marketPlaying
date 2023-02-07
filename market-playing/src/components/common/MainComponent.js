@@ -4,65 +4,101 @@ import isLogin from "../../router/lib/isLogin";
 
 const MainComponent = () => {
   return (
-    <div id="wrap" class="clfix">
-      <Header />
-      {/* <!-- section01 --> */}
-      <div id="section01" class="clfix">
-        <div class="con_left">
-          <div class="main_tit">
-            <p>Hello, {isLogin() ? "" : "Users"}</p>
-            <p>ToyProject</p>
+    <div id="wrap">
+      <div id="main">
+        <div id="header">
+          <div class="top_menu">
+            <div class="inner">
+              <ul>
+                <li>
+                  <a href="sub/sub02.html">LOGIN</a>
+                </li>
+                <li>
+                  <a href="sub/sub02.html">JOIN</a>
+                </li>
+                <li>
+                  <a href="sub/sub02.html">MYPAGE</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="main_btn">
-            <ul>
-              <a href="/main">
-                <li>게임하러가기</li>
-              </a>
-            </ul>
-            <ul>
-              <a href="#">
-                <li>게임방법</li>
-              </a>
-            </ul>
+          <div class="menu">
+            <div class="inner">
+              <h4>
+                <a href="index.html">TOY PROJECT</a>
+              </h4>
+              <ul>
+                <li>
+                  <a href="sub/sub01.html">게임하기</a>
+                </li>
+                <li>
+                  <a href="sub/sub02.html">게임방법</a>
+                </li>
+                <li>
+                  <a href="sub/sub02.html">게임소개</a>
+                </li>
+                <li>
+                  <a href="sub/sub02.html">리포트</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="con_right">
-          <img src={require("../../img/main_img.jpg")} alt="" />
+        <div id="section">
+          <div class="inner">
+            <div class="box01">
+              <div class="txt_wrap">
+                <p>
+                  <span>Hello, Users</span> <br />
+                  Toy Project
+                </p>
+              </div>
+              <div class="btn_wrap">
+                <a href="sub/sub01.html">게임하러가기</a>
+                <a href="sub/sub02.html">게임방법</a>
+              </div>
+            </div>
+            <div class="box02">
+              <div class="con_box">
+                <p>
+                  처음 오신분들 반갑습니다 :)
+                  <br />
+                  로그인을 하면 게임저장이 가능하다는 꿀팁!
+                </p>
+                <div class="a_wrap">
+                  <a href="sub/sub02.html">로그인</a>
+                  <a href="sub/sub02.html">회원가입</a>
+                </div>
+              </div>
+              <div class="con_box">
+                <p>
+                  오늘도 즐거운 게임 이용하셨나요 :)
+                  <br />
+                  재미있게 게임 하셨다면
+                  <br />
+                  게임 랭킹 순위도 확인해보세요!
+                </p>
+                <div class="a_wrap">
+                  <a href="sub/sub02.html">게임랭킹순위</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <div class="inner">
+            <div class="txt_wrap">
+              <h5>TOY PROJECT LOGO</h5>
+              <p>COPYRIGHTⓒ 2023 TOYPROJECT ALL RIGHT RESERVED</p>
+            </div>
+            <div class="img_wrap">
+              <a href="sub/sub02.html">
+                <img src={require("../../img/foot_about.png")} alt="" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      {/* <!-- //section01 --> */}
-      {/* <!-- section02--> */}
-      <div id="section02" class="clfix">
-        <div class="con_box">
-          <p>
-            처음오신분들 반갑습니다 :)
-            <br />
-            로그인을 하면 게임저장이 가능하다는 꿀팁!
-          </p>
-          <div class="btn">
-            <a href="/login">
-              <span>로그인하기</span>
-            </a>
-            <a href="/join">
-              <span>회원가입하기</span>
-            </a>
-          </div>
-        </div>
-        <div class="con_box">
-          <p>
-            게임을 이용해주셔서 감사합니다 :)
-            <br />
-            게임에 대한 리뷰한줄 작성 부탁드립니다!
-          </p>
-          <div class="btn">
-            <a href="">
-              <span>리뷰작성하기</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      {/* <!-- //section02--> */}
-      <Footer />
     </div>
   );
 };
