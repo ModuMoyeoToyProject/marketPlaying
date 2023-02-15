@@ -11,10 +11,10 @@ const MainComponent = () => {
             <div class="inner">
               <ul>
                 <li>
-                  <a href="sub/sub02.html">LOGIN</a>
+                  <a href="/login">LOGIN</a>
                 </li>
                 <li>
-                  <a href="sub/sub02.html">JOIN</a>
+                  <a href="/join">JOIN</a>
                 </li>
                 <li>
                   <a href="sub/sub02.html">MYPAGE</a>
@@ -25,11 +25,11 @@ const MainComponent = () => {
           <div class="menu">
             <div class="inner">
               <h4>
-                <a href="index.html">TOY PROJECT</a>
+                <a href="/modu">TOY PROJECT</a>
               </h4>
               <ul>
                 <li>
-                  <a href="sub/sub01.html">게임하기</a>
+                  <a href="/main">게임하기</a>
                 </li>
                 <li>
                   <a href="sub/sub02.html">게임방법</a>
@@ -54,7 +54,7 @@ const MainComponent = () => {
                 </p>
               </div>
               <div class="btn_wrap">
-                <a href="sub/sub01.html">게임하러가기</a>
+                <a href="/main">게임하러가기</a>
                 <a href="sub/sub02.html">게임방법</a>
               </div>
             </div>
@@ -66,8 +66,8 @@ const MainComponent = () => {
                   로그인을 하면 게임저장이 가능하다는 꿀팁!
                 </p>
                 <div class="a_wrap">
-                  <a href="sub/sub02.html">로그인</a>
-                  <a href="sub/sub02.html">회원가입</a>
+                  <a href="/login">로그인</a>
+                  <a href="/join">회원가입</a>
                 </div>
               </div>
               <div class="con_box">
